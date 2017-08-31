@@ -311,7 +311,7 @@ func (node *defaultNode) SpinOnce() {
 	timeoutChan := time.After(10 * time.Millisecond)
 	select {
 	case job := <-node.jobChan:
-		job()
+		go job()
 	case <-timeoutChan:
 		break
 	}
@@ -324,7 +324,7 @@ func (node *defaultNode) Spin() {
 		select {
 		case job := <-node.jobChan:
 			logger.Debug("Execute job")
-			job()
+			go job()
 		case <-timeoutChan:
 			break
 		}

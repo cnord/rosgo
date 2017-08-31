@@ -149,8 +149,8 @@ func newRemoteClientSession(s *defaultServiceServer, conn net.Conn) *remoteClien
 	session := new(remoteClientSession)
 	session.server = s
 	session.conn = conn
-	session.responseChan = make(chan []byte)
-	session.errorChan = make(chan error)
+	session.responseChan = make(chan []byte, 1)
+	session.errorChan = make(chan error, 1)
 	return session
 }
 
