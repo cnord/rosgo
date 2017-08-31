@@ -3,7 +3,7 @@ package ros
 import (
 	"fmt"
 
-	"github.com/ppg/rosgo/xmlrpc"
+	"github.com/cnord/rosgo/xmlrpc"
 )
 
 func callRosApi(calleeUri string, method string, args ...interface{}) (interface{}, error) {
