@@ -31,6 +31,7 @@ type defaultPublisher struct {
 	msgChan            chan []byte
 	shutdownChan       chan struct{}
 	sessions           *list.List
+	sessLock           sync.Mutex
 	sessionErrorChan   chan error
 	listenerErrorChan  chan error
 	listener           net.Listener
@@ -79,10 +80,12 @@ func (pub *defaultPublisher) start(wg *sync.WaitGroup) {
 		select {
 		case msg := <-pub.msgChan:
 			logger.Debug("Receive msgChan")
+			pub.sessLock.Lock()
 			for e := pub.sessions.Front(); e != nil; e = e.Next() {
 				session := e.Value.(*remoteSubscriberSession)
 				session.msgChan <- msg
 			}
+			pub.sessLock.Unlock()
 		case err := <-pub.listenerErrorChan:
 			logger.Debug("Listener closed unexpectedly: %s", err)
 			pub.listener.Close()
@@ -90,12 +93,14 @@ func (pub *defaultPublisher) start(wg *sync.WaitGroup) {
 		case err := <-pub.sessionErrorChan:
 			logger.Error(err)
 			if sessionError, ok := err.(*remoteSubscriberSessionError); ok {
+				pub.sessLock.Lock()
 				for e := pub.sessions.Front(); e != nil; e = e.Next() {
 					if e.Value == sessionError.session {
 						pub.sessions.Remove(e)
 						break
 					}
 				}
+				pub.sessLock.Unlock()
 			}
 		case <-pub.shutdownChan:
 			logger.Debug("defaultPublisher.start Receive shutdownChan")
@@ -105,11 +110,13 @@ func (pub *defaultPublisher) start(wg *sync.WaitGroup) {
 			if err != nil {
 				logger.Warn(err)
 			}
+			pub.sessLock.Lock()
 			for e := pub.sessions.Front(); e != nil; e = e.Next() {
 				session := e.Value.(*remoteSubscriberSession)
 				session.quitChan <- struct{}{}
 			}
 			pub.sessions.Init() // Clear all sessions
+			pub.sessLock.Unlock()
 			return
 		}
 	}
@@ -133,7 +140,9 @@ func (pub *defaultPublisher) listenRemoteSubscriber() {
 		} else {
 			logger.Debugf("Connected %s", conn.RemoteAddr().String())
 			session := newRemoteSubscriberSession(pub, conn)
+			pub.sessLock.Lock()
 			pub.sessions.PushBack(session)
+			pub.sessLock.Unlock()
 			go session.start()
 		}
 	}
