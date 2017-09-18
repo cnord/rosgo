@@ -92,7 +92,7 @@ func (s *defaultServiceServer) start() {
 	for {
 		conn, err := s.listener.Accept()
 		if err != nil {
-			logger.Debugf("s.listener.Accept() failed")
+			logger.Debugf("s.listener.Accept() failed: %v", err)
 			return
 		}
 		logger.Debugf("Connected from %s", conn.RemoteAddr().String())
