@@ -8,6 +8,7 @@ import (
 	"io"
 	"net"
 	"reflect"
+	"sync"
 	"time"
 )
 
@@ -32,6 +33,7 @@ type defaultServiceServer struct {
 	handler          interface{}
 	listener         *net.TCPListener
 	sessions         *list.List
+	sessLock         sync.Mutex
 	shutdownChan     chan struct{}
 	sessionErrorChan chan error
 }
@@ -85,34 +87,38 @@ func (s *defaultServiceServer) start() {
 		s.node.waitGroup.Done()
 	}()
 
-	for {
-		//logger.Debug("defaultServiceServer.start loop");
-		s.listener.SetDeadline(time.Now().Add(1 * time.Millisecond))
-		if conn, err := s.listener.Accept(); err != nil {
-			opError, ok := err.(*net.OpError)
-			if !ok || !opError.Timeout() {
-				logger.Debugf("s.listner.Accept() failed")
-				return
-			}
-		} else {
-			logger.Debugf("Connected from %s", conn.RemoteAddr().String())
-			session := newRemoteClientSession(s, conn)
-			s.sessions.PushBack(session)
-			go session.start()
-		}
+	go s.chanLoop()
 
-		timeoutChan := time.After(1 * time.Millisecond)
+	for {
+		conn, err := s.listener.Accept()
+		if err != nil {
+			logger.Debugf("s.listener.Accept() failed: %v", err)
+			return
+		}
+		logger.Debugf("Connected from %s", conn.RemoteAddr().String())
+		session := newRemoteClientSession(s, conn)
+		s.sessLock.Lock()
+		s.sessions.PushBack(session)
+		s.sessLock.Unlock()
+		go session.start()
+	}
+}
+
+func (s *defaultServiceServer) chanLoop() {
+	logger := s.node.logger
+	for {
 		select {
 		case err := <-s.sessionErrorChan:
 			logger.Errorf("session error: %v", err)
 			if sessionError, ok := err.(*remoteClientSessionError); ok {
+				s.sessLock.Lock()
 				for e := s.sessions.Front(); e != nil; e = e.Next() {
 					if e.Value == sessionError.session {
 						logger.Debugf("service session %v removed", e.Value)
 						s.sessions.Remove(e)
-						break
 					}
 				}
+				s.sessLock.Unlock()
 			}
 		case <-s.shutdownChan:
 			logger.Debug("defaultServiceServer.start Receive shutdownChan")
@@ -124,15 +130,15 @@ func (s *defaultServiceServer) start() {
 				logger.Warn("Failed unregisterService(%s): %v", s.service, err)
 			}
 			logger.Debug("Called unregisterService(%s)", s.service)
+			s.sessLock.Lock()
 			for e := s.sessions.Front(); e != nil; e = e.Next() {
 				session := e.Value.(*remoteClientSession)
 				session.quitChan <- struct{}{}
 			}
 			s.sessions.Init() // Clear all sessions
+			s.sessLock.Unlock()
 			logger.Debug("defaultServiceServer.start session cleared")
 			return
-		case <-timeoutChan:
-			break
 		}
 	}
 }
