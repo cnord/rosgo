@@ -132,7 +132,7 @@ func (pub *defaultPublisher) listenRemoteSubscriber() {
 	for {
 		logger.Debug("defaultPublisher.listenRemoteSubscriber loop")
 		if conn, err := pub.listener.Accept(); err != nil {
-			logger.Debugf("pub.listner.Accept() failed")
+			logger.Debugf("pub.listener.Accept() failed")
 			pub.listenerErrorChan <- err
 			close(pub.listenerErrorChan)
 			logger.Debugf("defaultPublisher.listenRemoteSubscriber loop exit")
