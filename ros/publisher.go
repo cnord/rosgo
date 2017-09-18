@@ -97,7 +97,6 @@ func (pub *defaultPublisher) start(wg *sync.WaitGroup) {
 				for e := pub.sessions.Front(); e != nil; e = e.Next() {
 					if e.Value == sessionError.session {
 						pub.sessions.Remove(e)
-						break
 					}
 				}
 				pub.sessLock.Unlock()
