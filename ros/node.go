@@ -37,6 +37,7 @@ type defaultNode struct {
 	logger         Logger
 	ok             bool
 	okMutex        sync.RWMutex
+	mapMutex       sync.Mutex
 	waitGroup      sync.WaitGroup
 }
 
@@ -146,19 +147,23 @@ func (node *defaultNode) getPid(callerId string) (interface{}, error) {
 
 func (node *defaultNode) getSubscriptions(callerId string) (interface{}, error) {
 	result := []interface{}{}
+	node.mapMutex.Lock()
 	for t, s := range node.subscribers {
 		pair := []interface{}{t, s.msgType.Name()}
 		result = append(result, pair)
 	}
+	node.mapMutex.Unlock()
 	return buildRosApiResult(0, "Success", result), nil
 }
 
 func (node *defaultNode) getPublications(callerId string) (interface{}, error) {
 	result := []interface{}{}
+	node.mapMutex.Lock()
 	for t, p := range node.publishers {
 		pair := []interface{}{t, p.msgType.Name()}
 		result = append(result, pair)
 	}
+	node.mapMutex.Unlock()
 	return buildRosApiResult(0, "Success", result), nil
 }
 
@@ -170,7 +175,10 @@ func (node *defaultNode) publisherUpdate(callerId string, topic string, publishe
 	node.logger.Debug("Slave API publisherUpdate() called.")
 	var code int32
 	var message string
-	if sub, ok := node.subscribers[topic]; !ok {
+	node.mapMutex.Lock()
+	sub, ok := node.subscribers[topic]
+	node.mapMutex.Unlock()
+	if !ok {
 		node.logger.Debug("publisherUpdate() called without subscribing topic.")
 		code = 0
 		message = "No such topic"
@@ -191,7 +199,10 @@ func (node *defaultNode) requestTopic(callerId string, topic string, protocols [
 	var code int32
 	var message string
 	var value interface{}
-	if pub, ok := node.publishers[topic]; !ok {
+	node.mapMutex.Lock()
+	pub, ok := node.publishers[topic]
+	node.mapMutex.Unlock()
+	if !ok {
 		node.logger.Debug("requestTopic() called with not publishing topic.")
 		code = 0
 		message = "No such topic"
@@ -229,7 +240,9 @@ func (node *defaultNode) NewPublisher(topic string, msgType MessageType) Publish
 
 func (node *defaultNode) NewPublisherWithCallbacks(topic string, msgType MessageType,
 	connectCallback, disconnectCallback func(SingleSubscriberPublisher)) Publisher {
+	node.mapMutex.Lock()
 	pub, ok := node.publishers[topic]
+	node.mapMutex.Unlock()
 	logger := node.logger
 	if !ok {
 		_, err := callRosApi(node.masterUri, "registerPublisher",
@@ -241,14 +254,18 @@ func (node *defaultNode) NewPublisherWithCallbacks(topic string, msgType Message
 		}
 
 		pub = newDefaultPublisher(logger, node.qualifiedName, node.xmlrpcUri, node.masterUri, topic, msgType, connectCallback, disconnectCallback)
+		node.mapMutex.Lock()
 		node.publishers[topic] = pub
+		node.mapMutex.Unlock()
 		go pub.start(&node.waitGroup)
 	}
 	return pub
 }
 
 func (node *defaultNode) NewSubscriber(topic string, msgType MessageType, callback interface{}) Subscriber {
+	node.mapMutex.Lock()
 	sub, ok := node.subscribers[topic]
+	node.mapMutex.Unlock()
 	logger := node.logger
 	if !ok {
 		node.logger.Debug("Call Master API registerSubscriber")
@@ -276,7 +293,9 @@ func (node *defaultNode) NewSubscriber(topic string, msgType MessageType, callba
 		logger.Debugf("Publisher URI list: ", publishers)
 
 		sub = newDefaultSubscriber(topic, msgType, callback)
+		node.mapMutex.Lock()
 		node.subscribers[topic] = sub
+		node.mapMutex.Unlock()
 
 		logger.Debugf("Start subscriber goroutine for topic '%s'", sub.topic)
 		go sub.start(&node.waitGroup, node.masterUri, node.qualifiedName, node.xmlrpcUri, node.jobChan, logger)
@@ -295,7 +314,9 @@ func (node *defaultNode) NewServiceClient(service string, srvType ServiceType) S
 }
 
 func (node *defaultNode) NewServiceServer(service string, srvType ServiceType, handler interface{}) ServiceServer {
+	node.mapMutex.Lock()
 	server, ok := node.servers[service]
+	node.mapMutex.Unlock()
 	if ok {
 		server.Shutdown()
 	}
@@ -303,7 +324,9 @@ func (node *defaultNode) NewServiceServer(service string, srvType ServiceType, h
 	if server == nil {
 		return nil
 	}
+	node.mapMutex.Lock()
 	node.servers[service] = server
+	node.mapMutex.Unlock()
 	return server
 }
 
@@ -336,18 +359,34 @@ func (node *defaultNode) Shutdown() {
 	node.okMutex.Lock()
 	node.ok = false
 	node.okMutex.Unlock()
+
+	node.mapMutex.Lock()
+	subscribers := make(map[string]*defaultSubscriber)
+	for k, v := range node.subscribers {
+		subscribers[k] = v
+	}
+	publishers := make(map[string]*defaultPublisher)
+	for k, v := range node.publishers {
+		publishers[k] = v
+	}
+	servers := make(map[string]*defaultServiceServer)
+	for k, v := range node.servers {
+		servers[k] = v
+	}
+	node.mapMutex.Unlock()
+
 	node.logger.Debug("Shutdown subscribers")
-	for _, s := range node.subscribers {
+	for _, s := range subscribers {
 		s.Shutdown()
 	}
 	node.logger.Debug("Shutdown subscribers...done")
 	node.logger.Debug("Shutdown publishers")
-	for _, p := range node.publishers {
+	for _, p := range publishers {
 		p.Shutdown()
 	}
 	node.logger.Debug("Shutdown publishers...done")
 	node.logger.Debug("Shutdown servers")
-	for _, s := range node.servers {
+	for _, s := range servers {
 		s.Shutdown()
 	}
 	node.logger.Debug("Shutdown servers...done")
