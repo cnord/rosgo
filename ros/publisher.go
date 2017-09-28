@@ -35,6 +35,7 @@ type defaultPublisher struct {
 	sessionErrorChan   chan error
 	listenerErrorChan  chan error
 	listener           net.Listener
+	listenAddr         string
 	connectCallback    func(SingleSubscriberPublisher)
 	disconnectCallback func(SingleSubscriberPublisher)
 }
@@ -60,6 +61,7 @@ func newDefaultPublisher(logger Logger, nodeId string, nodeApiUri string,
 		panic(err)
 	} else {
 		pub.listener = listener
+		pub.listenAddr = listener.Addr().String()
 	}
 	return pub
 }
@@ -123,7 +125,7 @@ func (pub *defaultPublisher) start(wg *sync.WaitGroup) {
 
 func (pub *defaultPublisher) listenRemoteSubscriber() {
 	logger := pub.logger
-	logger.Debugf("Start listen %s.", pub.listener.Addr().String())
+	logger.Debugf("Start listen %s.", pub.listenAddr)
 	defer func() {
 		logger.Debug("defaultPublisher.listenRemoteSubscriber exit")
 	}()
@@ -158,7 +160,7 @@ func (pub *defaultPublisher) Shutdown() {
 }
 
 func (pub *defaultPublisher) hostAndPort() (string, string) {
-	addr, port, err := net.SplitHostPort(pub.listener.Addr().String())
+	addr, port, err := net.SplitHostPort(pub.listenAddr)
 	if err != nil {
 		// Not reached
 		panic(err)
