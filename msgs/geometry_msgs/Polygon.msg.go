@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPolygon struct {
@@ -41,7 +41,7 @@ var (
 Point32[] points
 `,
 		"geometry_msgs/Polygon",
-		"9d3aa06749458d74b06b6e2ab6c8104d",
+		"cd60a26494a087f577976f0329fa120e",
 	}
 )
 

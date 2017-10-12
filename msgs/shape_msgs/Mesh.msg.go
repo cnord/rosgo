@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMesh struct {
@@ -47,7 +47,7 @@ MeshTriangle[] triangles
 geometry_msgs/Point[] vertices
 `,
 		"shape_msgs/Mesh",
-		"de320644698bf336f8f37512079d2586",
+		"1ffdae9486cd3316a121c578b47a85cc",
 	}
 )
 

@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTimeReference struct {
@@ -45,7 +45,7 @@ time   time_ref  # corresponding time from this external source
 string source    # (optional) name of time source
 `,
 		"sensor_msgs/TimeReference",
-		"ef08a08cc0648eb4e42fa2a172b1731a",
+		"fded64a0265108ba86c3d38fb11c0c16",
 	}
 )
 

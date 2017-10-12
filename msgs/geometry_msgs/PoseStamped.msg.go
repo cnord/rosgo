@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPoseStamped struct {
@@ -41,7 +41,7 @@ Header header
 Pose pose
 `,
 		"geometry_msgs/PoseStamped",
-		"43f3760283d49766c9fdd69c4461f732",
+		"d3812c3cbc69362b77dc0b19b345f8f5",
 	}
 )
 

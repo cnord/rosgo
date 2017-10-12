@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTFMessage struct {
@@ -41,7 +41,7 @@ var (
 		`geometry_msgs/TransformStamped[] transforms
 `,
 		"tf2_msgs/TFMessage",
-		"996e2194fbbcbb59e036b104dcc9f6fb",
+		"94810edda583a504dfda3829e70d7eec",
 	}
 )
 

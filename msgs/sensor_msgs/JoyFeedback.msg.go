@@ -6,7 +6,7 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJoyFeedback struct {
@@ -52,13 +52,13 @@ float32 intensity
 
 `,
 		"sensor_msgs/JoyFeedback",
-		"6a3facdc77535982cb1741407e0f8e73",
+		"f4dcd73460360d98f36e55ee7f2e46f1",
 	}
 )
 
 type JoyFeedback struct {
 	Type      uint8
-	ID        uint8
+	Id        uint8
 	Intensity float32
 }
 
@@ -67,7 +67,7 @@ func (m *JoyFeedback) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "uint8", &m.ID); err != nil {
+	if err = ros.SerializeMessageField(w, "uint8", &m.Id); err != nil {
 		return err
 	}
 
@@ -84,8 +84,8 @@ func (m *JoyFeedback) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ID
-	if err = ros.DeserializeMessageField(r, "uint8", &m.ID); err != nil {
+	// Id
+	if err = ros.DeserializeMessageField(r, "uint8", &m.Id); err != nil {
 		return err
 	}
 

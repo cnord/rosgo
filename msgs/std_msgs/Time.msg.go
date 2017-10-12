@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTime struct {
@@ -38,7 +38,7 @@ var (
 		`time data
 `,
 		"std_msgs/Time",
-		"04996afd7481fbeb7a3cfac675a5f3a3",
+		"cd7166c74c552c311fbcc2fe5a7bc289",
 	}
 )
 

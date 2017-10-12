@@ -6,7 +6,7 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGetMapAction struct {
@@ -42,7 +42,7 @@ GetMapActionResult action_result
 GetMapActionFeedback action_feedback
 `,
 		"nav_msgs/GetMapAction",
-		"1b32a494009aafda21a0321a0f38d614",
+		"e611ad23fbf237c031b7536416dc7cd7",
 	}
 )
 

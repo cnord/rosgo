@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMagneticField struct {
@@ -62,7 +62,7 @@ var (
  float64[9] magnetic_field_covariance # Row major about x, y, z axes
                                       # 0 is interpreted as variance unknown`,
 		"sensor_msgs/MagneticField",
-		"c0710f7b47375a70c3e781a8f04e2833",
+		"2f3b0b43eed0c9501de0fa3ff89a45aa",
 	}
 )
 

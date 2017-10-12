@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGripperCommandResult struct {
@@ -42,7 +42,7 @@ bool stalled      # True iff the gripper is exerting max effort and not moving
 bool reached_goal # True iff the gripper position has reached the commanded setpoint
 `,
 		"control_msgs/GripperCommandResult",
-		"281a6ca4f07917e8270ee0e1f38f98af",
+		"e4cbff56d3562bcf113da5a5adeef91f",
 	}
 )
 

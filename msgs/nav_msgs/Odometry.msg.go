@@ -6,9 +6,9 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgOdometry struct {
@@ -46,13 +46,13 @@ geometry_msgs/PoseWithCovariance pose
 geometry_msgs/TwistWithCovariance twist
 `,
 		"nav_msgs/Odometry",
-		"698b128f01737ca3ec6fd7d2eabc226e",
+		"cd5e73d190d741a2f92e81eda573aca7",
 	}
 )
 
 type Odometry struct {
 	Header       std_msgs.Header
-	ChildFrameID string
+	ChildFrameId string
 	Pose         geometry_msgs.PoseWithCovariance
 	Twist        geometry_msgs.TwistWithCovariance
 }
@@ -62,7 +62,7 @@ func (m *Odometry) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "string", &m.ChildFrameID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.ChildFrameId); err != nil {
 		return err
 	}
 
@@ -83,8 +83,8 @@ func (m *Odometry) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ChildFrameID
-	if err = ros.DeserializeMessageField(r, "string", &m.ChildFrameID); err != nil {
+	// ChildFrameId
+	if err = ros.DeserializeMessageField(r, "string", &m.ChildFrameId); err != nil {
 		return err
 	}
 

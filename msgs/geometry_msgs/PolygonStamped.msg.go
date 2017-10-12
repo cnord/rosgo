@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPolygonStamped struct {
@@ -41,7 +41,7 @@ Header header
 Polygon polygon
 `,
 		"geometry_msgs/PolygonStamped",
-		"aa0712e581b3057dba582c695ff17d61",
+		"c6be8f7dc3bee7fe9e8d296070f53340",
 	}
 )
 

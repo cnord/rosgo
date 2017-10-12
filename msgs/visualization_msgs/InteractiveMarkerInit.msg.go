@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInteractiveMarkerInit struct {
@@ -53,18 +53,18 @@ uint64 seq_num
 InteractiveMarker[] markers
 `,
 		"visualization_msgs/InteractiveMarkerInit",
-		"6fe25ae7424b594bde75cf947cb3c00e",
+		"d5f2c5045a72456d228676ab91048734",
 	}
 )
 
 type InteractiveMarkerInit struct {
-	ServerID string
+	ServerId string
 	SeqNum   uint64
 	Markers  []InteractiveMarker
 }
 
 func (m *InteractiveMarkerInit) Serialize(w io.Writer) (err error) {
-	if err = ros.SerializeMessageField(w, "string", &m.ServerID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.ServerId); err != nil {
 		return err
 	}
 
@@ -87,8 +87,8 @@ func (m *InteractiveMarkerInit) Serialize(w io.Writer) (err error) {
 }
 
 func (m *InteractiveMarkerInit) Deserialize(r io.Reader) (err error) {
-	// ServerID
-	if err = ros.DeserializeMessageField(r, "string", &m.ServerID); err != nil {
+	// ServerId
+	if err = ros.DeserializeMessageField(r, "string", &m.ServerId); err != nil {
 		return err
 	}
 

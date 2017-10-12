@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgCameraInfo struct {
@@ -96,7 +96,7 @@ uint32 width
 
 # The distortion model used. Supported models are listed in
 # sensor_msgs/distortion_models.h. For most cameras, "plumb_bob" - a
-# simple model of radial and tangential distortion - is sufficent.
+# simple model of radial and tangential distortion - is sufficient.
 string distortion_model
 
 # The distortion parameters, size depending on the distortion model.
@@ -171,7 +171,7 @@ uint32 binning_y
 RegionOfInterest roi
 `,
 		"sensor_msgs/CameraInfo",
-		"d0a6156da8c73e10477b4c9a74edbe23",
+		"c9a58c1b0b154e0e6da7578cb991d214",
 	}
 )
 

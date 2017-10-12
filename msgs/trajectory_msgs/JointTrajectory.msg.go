@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectory struct {
@@ -42,7 +42,7 @@ var (
 string[] joint_names
 JointTrajectoryPoint[] points`,
 		"trajectory_msgs/JointTrajectory",
-		"186334ad5bf79dd841f273f123aa4183",
+		"65b4f94a94d1ed67169da35a02f33d3f",
 	}
 )
 

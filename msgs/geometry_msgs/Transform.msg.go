@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTransform struct {
@@ -41,7 +41,7 @@ Vector3 translation
 Quaternion rotation
 `,
 		"geometry_msgs/Transform",
-		"756be060b1c8cf0e64a10ba16909d887",
+		"ac9eff44abf714214112b05d54a3cf9b",
 	}
 )
 

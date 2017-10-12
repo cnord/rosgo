@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGripperCommandFeedback struct {
@@ -43,7 +43,7 @@ bool reached_goal # True iff the gripper position has reached the commanded setp
 
 `,
 		"control_msgs/GripperCommandFeedback",
-		"74f2b51f6c37d7f6d457ab6aa2205259",
+		"e4cbff56d3562bcf113da5a5adeef91f",
 	}
 )
 

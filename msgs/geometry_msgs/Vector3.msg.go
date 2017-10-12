@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgVector3 struct {
@@ -46,7 +46,7 @@ float64 x
 float64 y
 float64 z`,
 		"geometry_msgs/Vector3",
-		"a661f98e90ac456f3b4330d93aa5ae7e",
+		"4a842b65f413084dc2b10fb484ea7f17",
 	}
 )
 

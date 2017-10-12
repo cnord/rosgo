@@ -6,9 +6,9 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGetMapActionFeedback struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 GetMapFeedback feedback
 `,
 		"nav_msgs/GetMapActionFeedback",
-		"b1903ca2aba7657e9ae2ee27e803be66",
+		"aae20e09065c3809e8a8e87c4c8953fd",
 	}
 )
 

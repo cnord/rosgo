@@ -6,7 +6,7 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTF2Error struct {
@@ -47,7 +47,7 @@ uint8 error
 string error_string
 `,
 		"tf2_msgs/TF2Error",
-		"4373ee33104a6a2611a3bce8d34370e7",
+		"bc6848fd6fd750c92e38575618a4917d",
 	}
 )
 

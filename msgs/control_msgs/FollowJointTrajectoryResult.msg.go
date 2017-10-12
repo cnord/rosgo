@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFollowJointTrajectoryResult struct {
@@ -56,7 +56,7 @@ string error_string
 
 `,
 		"control_msgs/FollowJointTrajectoryResult",
-		"8814c14eea6988befd0cc8e254fdcc7f",
+		"493383b18409bfb604b4e26c676401d2",
 	}
 )
 

@@ -6,7 +6,7 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgRegionOfInterest struct {
@@ -56,7 +56,7 @@ uint32 width     # Width of ROI
 bool do_rectify
 `,
 		"sensor_msgs/RegionOfInterest",
-		"7cfa19dc46ace2888bcd1b7980b9e5cf",
+		"bdb633039d588fcccb441a4d43ccfe09",
 	}
 )
 

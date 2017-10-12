@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgWrench struct {
@@ -41,7 +41,7 @@ Vector3  force
 Vector3  torque
 `,
 		"geometry_msgs/Wrench",
-		"2aae87faaa553ae28e07e684016d765c",
+		"4f539cf138b23283b520fd271b567936",
 	}
 )
 

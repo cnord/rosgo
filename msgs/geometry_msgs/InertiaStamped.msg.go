@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInertiaStamped struct {
@@ -40,7 +40,7 @@ var (
 Inertia inertia
 `,
 		"geometry_msgs/InertiaStamped",
-		"f316819d435fac009022ead4726153cc",
+		"ddee48caeab5a966c5e8d166654a9ac7",
 	}
 )
 

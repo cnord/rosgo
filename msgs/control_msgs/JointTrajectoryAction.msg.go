@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectoryAction struct {
@@ -42,7 +42,7 @@ JointTrajectoryActionResult action_result
 JointTrajectoryActionFeedback action_feedback
 `,
 		"control_msgs/JointTrajectoryAction",
-		"42ed1b0cbf2b5e2d85cea28d528e5774",
+		"a04ba3ee8f6a2d0985a6aeaf23d9d7ad",
 	}
 )
 

@@ -6,7 +6,7 @@ package rosgraph_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgClock struct {
@@ -41,7 +41,7 @@ var (
 time clock
 `,
 		"rosgraph_msgs/Clock",
-		"e6ecd4ab41c1032b93bdc409a310b211",
+		"a9c97c1d230cfc112e270351a944ee47",
 	}
 )
 

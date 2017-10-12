@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgWrenchStamped struct {
@@ -41,7 +41,7 @@ Header header
 Wrench wrench
 `,
 		"geometry_msgs/WrenchStamped",
-		"150502b356390fb151385ef7647f633e",
+		"d78d3cb249ce23087ade7e7d0c40cfa7",
 	}
 )
 

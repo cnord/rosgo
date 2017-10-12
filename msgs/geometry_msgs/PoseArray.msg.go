@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPoseArray struct {
@@ -45,7 +45,7 @@ Header header
 Pose[] poses
 `,
 		"geometry_msgs/PoseArray",
-		"5f3f794301c7af61b3beab5b9997bb64",
+		"916c28c5764443f268b296bb671b9d97",
 	}
 )
 

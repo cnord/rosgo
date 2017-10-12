@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionActionGoal struct {
@@ -44,13 +44,13 @@ actionlib_msgs/GoalID goal_id
 SingleJointPositionGoal goal
 `,
 		"control_msgs/SingleJointPositionActionGoal",
-		"f4a82700182e5f4f7f358b666e6ca7b2",
+		"4b0d3d091471663e17749c1d0db90f61",
 	}
 )
 
 type SingleJointPositionActionGoal struct {
 	Header std_msgs.Header
-	GoalID actionlib_msgs.GoalID
+	GoalId actionlib_msgs.GoalID
 	Goal   SingleJointPositionGoal
 }
 
@@ -59,7 +59,7 @@ func (m *SingleJointPositionActionGoal) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -76,8 +76,8 @@ func (m *SingleJointPositionActionGoal) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

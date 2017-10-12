@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJoy struct {
@@ -44,7 +44,7 @@ float32[] axes          # the axes measurements from a joystick
 int32[] buttons         # the buttons measurements from a joystick 
 `,
 		"sensor_msgs/Joy",
-		"3575d357a5c35c83d263fbb0c5bf3988",
+		"5a9ea5f83505693b71e785041e67a8bb",
 	}
 )
 

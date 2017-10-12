@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectoryActionResult struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 JointTrajectoryResult result
 `,
 		"control_msgs/JointTrajectoryActionResult",
-		"7a08e1a1afd919c1290f681fe7f26d49",
+		"1eb06eeff08fa7ea874431638cb52332",
 	}
 )
 

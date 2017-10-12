@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgAccelWithCovarianceStamped struct {
@@ -41,7 +41,7 @@ Header header
 AccelWithCovariance accel
 `,
 		"geometry_msgs/AccelWithCovarianceStamped",
-		"cf7b852cab243d76000e69f42f2700f6",
+		"96adb295225031ec8d57fb4251b0a886",
 	}
 )
 

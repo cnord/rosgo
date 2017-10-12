@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionGoal struct {
@@ -41,7 +41,7 @@ duration min_duration
 float64 max_velocity
 `,
 		"control_msgs/SingleJointPositionGoal",
-		"559179a05fec5a369c077fac92e60034",
+		"fbaaa562a23a013fd5053e5f72cbb35c",
 	}
 )
 

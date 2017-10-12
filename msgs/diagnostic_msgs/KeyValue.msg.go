@@ -6,7 +6,7 @@ package diagnostic_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgKeyValue struct {
@@ -39,7 +39,7 @@ var (
 string value # a value to track over time
 `,
 		"diagnostic_msgs/KeyValue",
-		"f42b961af7f6947ab0f9555f47ecb4d4",
+		"cf57fdc6617a881a88c16e768132149c",
 	}
 )
 

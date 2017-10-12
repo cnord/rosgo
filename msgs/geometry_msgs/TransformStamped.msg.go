@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTransformStamped struct {
@@ -48,13 +48,13 @@ string child_frame_id # the frame id of the child frame
 Transform transform
 `,
 		"geometry_msgs/TransformStamped",
-		"c788bacd82271109656949f89891ee39",
+		"b5764a33bfeb3588febc2682852579b0",
 	}
 )
 
 type TransformStamped struct {
 	Header       std_msgs.Header
-	ChildFrameID string
+	ChildFrameId string
 	Transform    Transform
 }
 
@@ -63,7 +63,7 @@ func (m *TransformStamped) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "string", &m.ChildFrameID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.ChildFrameId); err != nil {
 		return err
 	}
 
@@ -80,8 +80,8 @@ func (m *TransformStamped) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ChildFrameID
-	if err = ros.DeserializeMessageField(r, "string", &m.ChildFrameID); err != nil {
+	// ChildFrameId
+	if err = ros.DeserializeMessageField(r, "string", &m.ChildFrameId); err != nil {
 		return err
 	}
 

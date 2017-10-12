@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointStamped struct {
@@ -41,7 +41,7 @@ Header header
 Point point
 `,
 		"geometry_msgs/PointStamped",
-		"e948b3cf3f45aaeaedb063e8b966cf1f",
+		"c63aecb41bfdfd6b7e1fac37c7cbe7bf",
 	}
 )
 

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiEchoLaserScan struct {
@@ -70,7 +70,7 @@ LaserEcho[] intensities  # intensity data [device-specific units].  If your
                          # device does not provide intensities, please leave
                          # the array empty.`,
 		"sensor_msgs/MultiEchoLaserScan",
-		"b80691870c47673fb3c9bf3c06e0a0ab",
+		"6fefb0c6da89d7c8abe4b339f5c2f8fb",
 	}
 )
 

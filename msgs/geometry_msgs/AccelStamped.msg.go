@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgAccelStamped struct {
@@ -41,7 +41,7 @@ Header header
 Accel accel
 `,
 		"geometry_msgs/AccelStamped",
-		"b50c8c69ae37bb74d3cffd798577ca70",
+		"d8a98a5d81351b6eb0578c78557e7659",
 	}
 )
 

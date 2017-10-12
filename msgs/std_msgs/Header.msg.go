@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgHeader struct {
@@ -52,14 +52,14 @@ time stamp
 string frame_id
 `,
 		"std_msgs/Header",
-		"b570e0075f4022ff277e41bba54229f5",
+		"2176decaecbce78abc3b96ef049fabed",
 	}
 )
 
 type Header struct {
 	Seq     uint32
 	Stamp   ros.Time
-	FrameID string
+	FrameId string
 }
 
 func (m *Header) Serialize(w io.Writer) (err error) {
@@ -71,7 +71,7 @@ func (m *Header) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "string", &m.FrameID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.FrameId); err != nil {
 		return err
 	}
 
@@ -89,8 +89,8 @@ func (m *Header) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// FrameID
-	if err = ros.DeserializeMessageField(r, "string", &m.FrameID); err != nil {
+	// FrameId
+	if err = ros.DeserializeMessageField(r, "string", &m.FrameId); err != nil {
 		return err
 	}
 

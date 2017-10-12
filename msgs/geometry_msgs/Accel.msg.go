@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgAccel struct {
@@ -40,7 +40,7 @@ Vector3  linear
 Vector3  angular
 `,
 		"geometry_msgs/Accel",
-		"e7128c50122d225a806b2f9ad84736b1",
+		"9f195f881246fdfa2798d1d3eebca84a",
 	}
 )
 

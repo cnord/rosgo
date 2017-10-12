@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgImage struct {
@@ -67,7 +67,7 @@ uint32 step           # Full row length in bytes
 uint8[] data          # actual matrix data, size is (step * rows)
 `,
 		"sensor_msgs/Image",
-		"4233ee3710fbed0dbbbbde74c8e1a251",
+		"060021388200f6f0f447d0fcd9c64743",
 	}
 )
 

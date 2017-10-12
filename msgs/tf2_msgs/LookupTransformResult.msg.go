@@ -6,8 +6,8 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLookupTransformResult struct {
@@ -41,7 +41,7 @@ geometry_msgs/TransformStamped transform
 tf2_msgs/TF2Error error
 `,
 		"tf2_msgs/LookupTransformResult",
-		"1b424b9cebdb0bd3b355dd47a6c2cdca",
+		"3fe5db6a19ca9cfb675418c5ad875c36",
 	}
 )
 

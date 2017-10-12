@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJoyFeedbackArray struct {
@@ -40,7 +40,7 @@ var (
 		`# This message publishes values for multiple feedback at once. 
 JoyFeedback[] array`,
 		"sensor_msgs/JoyFeedbackArray",
-		"bdbcb223d565a59aeff3f78ba874e698",
+		"cde5730a895b1fc4dee6f91b754b213d",
 	}
 )
 

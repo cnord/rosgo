@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgBatteryState struct {
@@ -89,7 +89,7 @@ string location          # The location into which the battery is inserted. (slo
 string serial_number     # The best approximation of the battery serial number
 `,
 		"sensor_msgs/BatteryState",
-		"56ecc2d1da33cbae60aa83fa76d21ae1",
+		"476f837fa6771f6e16e3bf4ef96f8770",
 	}
 )
 

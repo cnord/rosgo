@@ -6,9 +6,9 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGetMapActionResult struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 GetMapResult result
 `,
 		"nav_msgs/GetMapActionResult",
-		"68a3f57ae795f2558128749b8138124b",
+		"ac66e5b9a79bb4bbd33dab245236c892",
 	}
 )
 

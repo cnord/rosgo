@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGridCells struct {
@@ -46,7 +46,7 @@ float32 cell_height
 geometry_msgs/Point[] cells
 `,
 		"nav_msgs/GridCells",
-		"7d008f8c0330939c0a1d8ef8feb2f6c7",
+		"b9e4f5df6d28e272ebde00a3994830f5",
 	}
 )
 

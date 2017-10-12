@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/msgs/trajectory_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/msgs/trajectory_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectoryControllerState struct {
@@ -46,7 +46,7 @@ trajectory_msgs/JointTrajectoryPoint actual
 trajectory_msgs/JointTrajectoryPoint error  # Redundant, but useful
 `,
 		"control_msgs/JointTrajectoryControllerState",
-		"48b8c5f5acf532b95d1db268eeba59ce",
+		"10817c60c2486ef6b33e97dcd87f4474",
 	}
 )
 

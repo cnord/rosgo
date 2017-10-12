@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionActionFeedback struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 SingleJointPositionFeedback feedback
 `,
 		"control_msgs/SingleJointPositionActionFeedback",
-		"c6315392b6d3665cedcdbb7e1bca23f9",
+		"3503b7cf8972f90d245850a5d8796cfa",
 	}
 )
 

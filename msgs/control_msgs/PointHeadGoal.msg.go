@@ -6,8 +6,8 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointHeadGoal struct {
@@ -44,7 +44,7 @@ duration min_duration
 float64 max_velocity
 `,
 		"control_msgs/PointHeadGoal",
-		"57514543f8e8c7f50339a60ad52c4524",
+		"8b92b1cd5e06c8a94c917dc3209a4c1d",
 	}
 )
 

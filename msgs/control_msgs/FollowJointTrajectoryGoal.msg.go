@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/trajectory_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/trajectory_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFollowJointTrajectoryGoal struct {
@@ -68,7 +68,7 @@ duration goal_time_tolerance
 
 `,
 		"control_msgs/FollowJointTrajectoryGoal",
-		"d6e925ca987733b7452947e90e68dd68",
+		"69636787b6ecbde4d61d711979bc7ecb",
 	}
 )
 

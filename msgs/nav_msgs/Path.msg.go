@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPath struct {
@@ -44,7 +44,7 @@ Header header
 geometry_msgs/PoseStamped[] poses
 `,
 		"nav_msgs/Path",
-		"ec86ae50c777497b60186b87d59a8808",
+		"6227e2b7e9cce15051f669a5e197bbf7",
 	}
 )
 

@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFollowJointTrajectoryActionFeedback struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 FollowJointTrajectoryFeedback feedback
 `,
 		"control_msgs/FollowJointTrajectoryActionFeedback",
-		"25790fef5dd90a2c2ed3ad3832b1c3a4",
+		"d8920dc4eae9fc107e00999cce4be641",
 	}
 )
 

@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgImu struct {
@@ -65,7 +65,7 @@ geometry_msgs/Vector3 linear_acceleration
 float64[9] linear_acceleration_covariance # Row major x, y z 
 `,
 		"sensor_msgs/Imu",
-		"e151f4f1e424591263d54004d2754410",
+		"6a62c6daae103f4ff57a132d6f95cec2",
 	}
 )
 

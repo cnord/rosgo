@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiDOFJointState struct {
@@ -67,7 +67,7 @@ geometry_msgs/Twist[] twist
 geometry_msgs/Wrench[] wrench
 `,
 		"sensor_msgs/MultiDOFJointState",
-		"ca6307bcc53f56ce3e190e089129c7f6",
+		"690f272f0640d2631c305eeb8301e59d",
 	}
 )
 

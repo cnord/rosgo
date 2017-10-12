@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPose struct {
@@ -35,12 +35,12 @@ func (t *_MsgPose) NewMessage() ros.Message {
 
 var (
 	MsgPose = &_MsgPose{
-		`# A representation of pose in free space, composed of postion and orientation. 
+		`# A representation of pose in free space, composed of position and orientation. 
 Point position
 Quaternion orientation
 `,
 		"geometry_msgs/Pose",
-		"dc72bb5c46de72bac142dec5d13c6f57",
+		"e45d45a5a1ce597b249e23fb30fc871f",
 	}
 )
 

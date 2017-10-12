@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointCloud2 struct {
@@ -67,7 +67,7 @@ uint8[] data         # Actual point data, size is (row_step*height)
 bool is_dense        # True if there are no invalid points
 `,
 		"sensor_msgs/PointCloud2",
-		"ab06445d54c5f15e92e2483e7828149f",
+		"1158d486dd51d683ce2f1be655c3c181",
 	}
 )
 

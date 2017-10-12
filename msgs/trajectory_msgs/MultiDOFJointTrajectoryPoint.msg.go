@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiDOFJointTrajectoryPoint struct {
@@ -50,7 +50,7 @@ geometry_msgs/Twist[] accelerations
 duration time_from_start
 `,
 		"trajectory_msgs/MultiDOFJointTrajectoryPoint",
-		"5f4362816258cb631113d0b515ba1c14",
+		"3ebe08d1abd5b65862d50e09430db776",
 	}
 )
 

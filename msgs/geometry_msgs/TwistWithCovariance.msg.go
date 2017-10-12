@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTwistWithCovariance struct {
@@ -48,7 +48,7 @@ Twist twist
 float64[36] covariance
 `,
 		"geometry_msgs/TwistWithCovariance",
-		"408e7ef4f4ec295f4663586922faacdd",
+		"1fe8a28e6890a4cc3ae4c3ca5c7d82e6",
 	}
 )
 

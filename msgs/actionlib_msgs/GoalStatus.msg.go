@@ -6,7 +6,7 @@ package actionlib_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGoalStatus struct {
@@ -60,18 +60,18 @@ string text
 
 `,
 		"actionlib_msgs/GoalStatus",
-		"b6758985eced8e08e99ce12a55072791",
+		"d388f9b87b3c471f784434d671988d4a",
 	}
 )
 
 type GoalStatus struct {
-	GoalID GoalID
+	GoalId GoalID
 	Status uint8
 	Text   string
 }
 
 func (m *GoalStatus) Serialize(w io.Writer) (err error) {
-	if err = ros.SerializeMessageField(w, "GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -87,8 +87,8 @@ func (m *GoalStatus) Serialize(w io.Writer) (err error) {
 }
 
 func (m *GoalStatus) Deserialize(r io.Reader) (err error) {
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

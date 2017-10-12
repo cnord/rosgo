@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInteractiveMarker struct {
@@ -67,7 +67,7 @@ MenuEntry[] menu_entries
 InteractiveMarkerControl[] controls
 `,
 		"visualization_msgs/InteractiveMarker",
-		"35474b6ee24280992e112232b62b4215",
+		"dd86d22909d5a3364b384492e35c10af",
 	}
 )
 

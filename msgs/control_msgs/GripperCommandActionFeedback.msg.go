@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGripperCommandActionFeedback struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 GripperCommandFeedback feedback
 `,
 		"control_msgs/GripperCommandActionFeedback",
-		"fe736ee47419d781e25d23721e3df6e5",
+		"653dff30c045f5e6ff3feb3409f4558d",
 	}
 )
 

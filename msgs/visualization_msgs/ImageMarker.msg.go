@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgImageMarker struct {
@@ -64,14 +64,14 @@ duration lifetime       # How long the object should last before being automatic
 geometry_msgs/Point[] points # used for LINE_STRIP/LINE_LIST/POINTS/etc., 2D in pixel coords
 std_msgs/ColorRGBA[] outline_colors # a color for each line, point, etc.`,
 		"visualization_msgs/ImageMarker",
-		"32f5635ee965c48f5d3f565629b204e2",
+		"1de93c67ec8858b831025a08fbf1b35c",
 	}
 )
 
 type ImageMarker struct {
 	Header        std_msgs.Header
 	Ns            string
-	ID            int32
+	Id            int32
 	Type          int32
 	Action        int32
 	Position      geometry_msgs.Point
@@ -93,7 +93,7 @@ func (m *ImageMarker) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "int32", &m.ID); err != nil {
+	if err = ros.SerializeMessageField(w, "int32", &m.Id); err != nil {
 		return err
 	}
 
@@ -165,8 +165,8 @@ func (m *ImageMarker) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ID
-	if err = ros.DeserializeMessageField(r, "int32", &m.ID); err != nil {
+	// Id
+	if err = ros.DeserializeMessageField(r, "int32", &m.Id); err != nil {
 		return err
 	}
 

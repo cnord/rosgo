@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPlane struct {
@@ -47,7 +47,7 @@ var (
 float64[4] coef
 `,
 		"shape_msgs/Plane",
-		"fc4d6d85ce294ff40862d9c7e9556367",
+		"2c1b92ed8f31492f8e73f6a4a44ca796",
 	}
 )
 

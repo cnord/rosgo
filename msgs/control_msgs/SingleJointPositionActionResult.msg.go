@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionActionResult struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 SingleJointPositionResult result
 `,
 		"control_msgs/SingleJointPositionActionResult",
-		"721bbe2e50a90049a415db83086873b8",
+		"1eb06eeff08fa7ea874431638cb52332",
 	}
 )
 

@@ -6,9 +6,9 @@ package visualization_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInteractiveMarkerFeedback struct {
@@ -81,18 +81,18 @@ geometry_msgs/Point mouse_point
 bool mouse_point_valid
 `,
 		"visualization_msgs/InteractiveMarkerFeedback",
-		"e3b3c21e428d08b74caa1bcb7dcc5413",
+		"ab0f1eee058667e28c19ff3ffc3f4b78",
 	}
 )
 
 type InteractiveMarkerFeedback struct {
 	Header          std_msgs.Header
-	ClientID        string
+	ClientId        string
 	MarkerName      string
 	ControlName     string
 	EventType       uint8
 	Pose            geometry_msgs.Pose
-	MenuEntryID     uint32
+	MenuEntryId     uint32
 	MousePoint      geometry_msgs.Point
 	MousePointValid bool
 }
@@ -102,7 +102,7 @@ func (m *InteractiveMarkerFeedback) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "string", &m.ClientID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.ClientId); err != nil {
 		return err
 	}
 
@@ -122,7 +122,7 @@ func (m *InteractiveMarkerFeedback) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "uint32", &m.MenuEntryID); err != nil {
+	if err = ros.SerializeMessageField(w, "uint32", &m.MenuEntryId); err != nil {
 		return err
 	}
 
@@ -143,8 +143,8 @@ func (m *InteractiveMarkerFeedback) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ClientID
-	if err = ros.DeserializeMessageField(r, "string", &m.ClientID); err != nil {
+	// ClientId
+	if err = ros.DeserializeMessageField(r, "string", &m.ClientId); err != nil {
 		return err
 	}
 
@@ -168,8 +168,8 @@ func (m *InteractiveMarkerFeedback) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// MenuEntryID
-	if err = ros.DeserializeMessageField(r, "uint32", &m.MenuEntryID); err != nil {
+	// MenuEntryId
+	if err = ros.DeserializeMessageField(r, "uint32", &m.MenuEntryId); err != nil {
 		return err
 	}
 

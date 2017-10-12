@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/msgs/trajectory_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/msgs/trajectory_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFollowJointTrajectoryFeedback struct {
@@ -48,7 +48,7 @@ trajectory_msgs/JointTrajectoryPoint error
 
 `,
 		"control_msgs/FollowJointTrajectoryFeedback",
-		"43a9ee5418d7d1b272026ea4d743553e",
+		"10817c60c2486ef6b33e97dcd87f4474",
 	}
 )
 

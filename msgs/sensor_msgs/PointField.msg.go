@@ -6,7 +6,7 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointField struct {
@@ -52,7 +52,7 @@ uint8  datatype  # Datatype enumeration, see above
 uint32 count     # How many elements in the field
 `,
 		"sensor_msgs/PointField",
-		"e121f1b64f22efa1152073fbaece31b7",
+		"268eacb2962780ceac86cbd17e328150",
 	}
 )
 

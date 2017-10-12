@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgRelativeHumidity struct {
@@ -49,7 +49,7 @@ var (
 
  float64 variance          # 0 is interpreted as variance unknown`,
 		"sensor_msgs/RelativeHumidity",
-		"baf803f82c25997678cb475199aba400",
+		"8730015b05955b7e992ce29a2678d90f",
 	}
 )
 
