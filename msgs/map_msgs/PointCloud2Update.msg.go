@@ -6,9 +6,9 @@ package map_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/sensor_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/sensor_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointCloud2Update struct {
@@ -44,7 +44,7 @@ uint32 type          # type of update, one of ADD or DELETE
 sensor_msgs/PointCloud2 points
 `,
 		"map_msgs/PointCloud2Update",
-		"d869b346dbf7628b6b0509d0e56795c7",
+		"6c58e4f249ae9cd2b24fb1ee0f99195e",
 	}
 )
 
