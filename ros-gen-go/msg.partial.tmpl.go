@@ -18,7 +18,7 @@ func msgPartialTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "", size: int64(len(bytes)), mode: os.FileMode(436), modTime: time.Unix(1507566040, 0)}
+	info := bindataFileInfo{name: "msg.partial.tmpl", size: int64(len(bytes)), mode: os.FileMode(436), modTime: time.Unix(1507566040, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
