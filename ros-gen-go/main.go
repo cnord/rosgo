@@ -31,36 +31,10 @@ var (
 	dryRun      bool
 )
 
+//go:generate go-bindata -o tmpl.go msg.partial.tmpl msg.tmpl srv.tmpl
+
 type loopVarSetter interface {
 	SetLoopVar(interface{})
-}
-
-func readFile(infile string) ([]byte, error) {
-	// That gimmick used to close infile before outfile,
-	// it takes off a race condition when outfile could be closed before infile, so,
-	// it means that make util could regenerate .msg.go files
-	finfile, err := os.Open(infile)
-	if err != nil {
-		//log.Fatalf("failed to open infile %s: %s", infile, err)
-		return nil, err;
-	}
-	defer finfile.Close()
-
-	var finstat os.FileInfo
-	finstat, err = finfile.Stat()
-	if err != nil {
-		//log.Fatalf("failed during receiving infile stat %s: %s", infile, err)
-		return nil, err;
-	}
-
-	var fisz int;
-	indata := make([]byte, finstat.Size())
-	fisz, err = finfile.Read(indata)
-	if (err != nil) || (finstat.Size() != int64(fisz)) {
-		//log.Fatalf("failed to read infile %s: %s", infile, err)
-		return nil, err;
-	}
-	return indata, nil
 }
 
 func main() {
@@ -132,7 +106,7 @@ func main() {
 	}
 
 	// Read input file
-	data, err = readFile(infile)
+	data, err = ioutil.ReadFile(infile)
 	if err != nil {
 		log.Fatalf("failed to read infile %s: %s", infile, err)
 	}
