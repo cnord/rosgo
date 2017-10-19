@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgDiagnosticStatus struct {
@@ -54,7 +54,7 @@ KeyValue[] values # an array of values associated with the status
 
 `,
 		"diagnostic_msgs/DiagnosticStatus",
-		"bfaff5a20cf26a7d7255cbaa01dae095",
+		"d0ce08bc6e5ba34c7754f563a9cabaf1",
 	}
 )
 
@@ -62,7 +62,7 @@ type DiagnosticStatus struct {
 	Level      int8
 	Name       string
 	Message    string
-	HardwareID string
+	HardwareId string
 	Values     []KeyValue
 }
 
@@ -79,7 +79,7 @@ func (m *DiagnosticStatus) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "string", &m.HardwareID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.HardwareId); err != nil {
 		return err
 	}
 
@@ -113,8 +113,8 @@ func (m *DiagnosticStatus) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// HardwareID
-	if err = ros.DeserializeMessageField(r, "string", &m.HardwareID); err != nil {
+	// HardwareId
+	if err = ros.DeserializeMessageField(r, "string", &m.HardwareId); err != nil {
 		return err
 	}
 

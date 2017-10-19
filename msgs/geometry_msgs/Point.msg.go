@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPoint struct {
@@ -41,7 +41,7 @@ float64 y
 float64 z
 `,
 		"geometry_msgs/Point",
-		"243a4e5999bbb6bb311c053eea9e3ead",
+		"4a842b65f413084dc2b10fb484ea7f17",
 	}
 )
 

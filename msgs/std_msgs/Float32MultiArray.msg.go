@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFloat32MultiArray struct {
@@ -45,7 +45,7 @@ float32[]         data          # array of data
 
 `,
 		"std_msgs/Float32MultiArray",
-		"ff660c8bfaa6212a1286f181d2600631",
+		"6a40e0ffa6a17a503ac3f8616991b1f6",
 	}
 )
 

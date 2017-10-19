@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGripperCommandGoal struct {
@@ -39,7 +39,7 @@ var (
 GripperCommand command
 `,
 		"control_msgs/GripperCommandGoal",
-		"78de881eecae5a7cf4fbd37d6d76d1dd",
+		"86fd82f4ddc48a4cb6856cfa69217e43",
 	}
 )
 

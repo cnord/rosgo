@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSmachContainerStatus struct {
@@ -58,7 +58,7 @@ string local_data
 string info
 `,
 		"smach_msgs/SmachContainerStatus",
-		"2a07c0f13a55f9c0e61b861363c73741",
+		"5ba2bb79ac19e3842d562a191f2a675b",
 	}
 )
 

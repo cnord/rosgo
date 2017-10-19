@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLaserScan struct {
@@ -69,7 +69,7 @@ float32[] intensities    # intensity data [device-specific units].  If your
                          # the array empty.
 `,
 		"sensor_msgs/LaserScan",
-		"d3b856c897413122882777076e64b0f7",
+		"90c7ef2dc6895d81024acba2ac42f369",
 	}
 )
 

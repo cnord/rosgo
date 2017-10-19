@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSmachContainerStructure struct {
@@ -56,7 +56,7 @@ string[] outcomes_to
 string[] container_outcomes
 `,
 		"smach_msgs/SmachContainerStructure",
-		"01c82f66ac449a8d875e9aebdab7682e",
+		"3d3d1e0d0f99779ee9e58101a5dcf7ea",
 	}
 )
 

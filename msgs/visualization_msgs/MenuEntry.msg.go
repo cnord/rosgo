@@ -6,7 +6,7 @@ package visualization_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMenuEntry struct {
@@ -91,24 +91,24 @@ uint8 ROSLAUNCH=2
 uint8 command_type
 `,
 		"visualization_msgs/MenuEntry",
-		"79f8c1595a875595df6690a4d1a3ac66",
+		"b90ec63024573de83b57aa93eb39be2d",
 	}
 )
 
 type MenuEntry struct {
-	ID          uint32
-	ParentID    uint32
+	Id          uint32
+	ParentId    uint32
 	Title       string
 	Command     string
 	CommandType uint8
 }
 
 func (m *MenuEntry) Serialize(w io.Writer) (err error) {
-	if err = ros.SerializeMessageField(w, "uint32", &m.ID); err != nil {
+	if err = ros.SerializeMessageField(w, "uint32", &m.Id); err != nil {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "uint32", &m.ParentID); err != nil {
+	if err = ros.SerializeMessageField(w, "uint32", &m.ParentId); err != nil {
 		return err
 	}
 
@@ -128,13 +128,13 @@ func (m *MenuEntry) Serialize(w io.Writer) (err error) {
 }
 
 func (m *MenuEntry) Deserialize(r io.Reader) (err error) {
-	// ID
-	if err = ros.DeserializeMessageField(r, "uint32", &m.ID); err != nil {
+	// Id
+	if err = ros.DeserializeMessageField(r, "uint32", &m.Id); err != nil {
 		return err
 	}
 
-	// ParentID
-	if err = ros.DeserializeMessageField(r, "uint32", &m.ParentID); err != nil {
+	// ParentId
+	if err = ros.DeserializeMessageField(r, "uint32", &m.ParentId); err != nil {
 		return err
 	}
 

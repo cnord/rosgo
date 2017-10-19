@@ -6,8 +6,8 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMapMetaData struct {
@@ -50,7 +50,7 @@ uint32 height
 # cell (0,0) in the map.
 geometry_msgs/Pose origin`,
 		"nav_msgs/MapMetaData",
-		"84f12218a664df5896e1e5f18e75d1b0",
+		"10cfc8a2818024d3248802c00c95f11b",
 	}
 )
 

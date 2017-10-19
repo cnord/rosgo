@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgUInt64MultiArray struct {
@@ -45,7 +45,7 @@ uint64[]          data          # array of data
 
 `,
 		"std_msgs/UInt64MultiArray",
-		"61643890115c64ea151267f0dcdc4f3e",
+		"6088f127afb1d6c72927aa1247e945af",
 	}
 )
 

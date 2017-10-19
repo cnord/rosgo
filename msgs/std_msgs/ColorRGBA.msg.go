@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgColorRGBA struct {
@@ -41,7 +41,7 @@ float32 b
 float32 a
 `,
 		"std_msgs/ColorRGBA",
-		"631d37ed76123c8a0893f65a4f3b63b9",
+		"a29a96539573343b1310c73607334b00",
 	}
 )
 

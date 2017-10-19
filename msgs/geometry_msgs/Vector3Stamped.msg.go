@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgVector3Stamped struct {
@@ -41,7 +41,7 @@ Header header
 Vector3 vector
 `,
 		"geometry_msgs/Vector3Stamped",
-		"25a0f208694a205ef85c426c089ebf78",
+		"7b324c7325e683bf02a9b14b01090ec7",
 	}
 )
 

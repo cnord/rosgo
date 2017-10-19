@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgChannelFloat32 struct {
@@ -63,7 +63,7 @@ string name
 float32[] values
 `,
 		"sensor_msgs/ChannelFloat32",
-		"93f53b4f01c1d3cae1fb52b34e87405c",
+		"3d40139cdd33dfedcb71ffeeeb42ae7f",
 	}
 )
 

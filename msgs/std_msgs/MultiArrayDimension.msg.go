@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiArrayDimension struct {
@@ -39,7 +39,7 @@ var (
 uint32 size    # size of given dimension (in type units)
 uint32 stride  # stride of given dimension`,
 		"std_msgs/MultiArrayDimension",
-		"b8e7d500a9ab625aab96d646720abb13",
+		"4cd0c83a8683deae40ecdac60e53bfa8",
 	}
 )
 

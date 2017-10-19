@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPoseWithCovarianceStamped struct {
@@ -42,7 +42,7 @@ Header header
 PoseWithCovariance pose
 `,
 		"geometry_msgs/PoseWithCovarianceStamped",
-		"729039794eaab042b403222dbf81e197",
+		"953b798c0f514ff060a53a3498ce6246",
 	}
 )
 

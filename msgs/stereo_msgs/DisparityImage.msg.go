@@ -6,9 +6,9 @@ package stereo_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/sensor_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/sensor_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgDisparityImage struct {
@@ -68,7 +68,7 @@ float32 max_disparity
 float32 delta_d
 `,
 		"stereo_msgs/DisparityImage",
-		"f33f64a97fa1bd153e562d657e8ee86c",
+		"04a177815f75271039fa21f16acad8c9",
 	}
 )
 

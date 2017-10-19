@@ -6,9 +6,9 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLookupTransformActionGoal struct {
@@ -44,13 +44,13 @@ actionlib_msgs/GoalID goal_id
 LookupTransformGoal goal
 `,
 		"tf2_msgs/LookupTransformActionGoal",
-		"0dc122e6d207537854c1091c7efaea8b",
+		"f2e7bcdb75c847978d0351a13e699da5",
 	}
 )
 
 type LookupTransformActionGoal struct {
 	Header std_msgs.Header
-	GoalID actionlib_msgs.GoalID
+	GoalId actionlib_msgs.GoalID
 	Goal   LookupTransformGoal
 }
 
@@ -59,7 +59,7 @@ func (m *LookupTransformActionGoal) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -76,8 +76,8 @@ func (m *LookupTransformActionGoal) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

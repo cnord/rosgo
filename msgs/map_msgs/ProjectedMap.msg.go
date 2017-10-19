@@ -6,8 +6,8 @@ package map_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/nav_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/nav_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgProjectedMap struct {
@@ -40,7 +40,7 @@ var (
 float64 min_z
 float64 max_z`,
 		"map_msgs/ProjectedMap",
-		"39cfd3d65f74c1179ef7f7258f002167",
+		"7bbe8f96e45089681dc1ea7d023cbfca",
 	}
 )
 

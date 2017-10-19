@@ -6,8 +6,8 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointControllerState struct {
@@ -47,10 +47,10 @@ float64 p
 float64 i
 float64 d
 float64 i_clamp
-
+bool antiwindup
 `,
 		"control_msgs/JointControllerState",
-		"8bdc19d6058e1654165f129c40b1bc86",
+		"987ad85e4756f3aef7f1e5e7fe0595d1",
 	}
 )
 
@@ -66,6 +66,7 @@ type JointControllerState struct {
 	I               float64
 	D               float64
 	IClamp          float64
+	Antiwindup      bool
 }
 
 func (m *JointControllerState) Serialize(w io.Writer) (err error) {
@@ -110,6 +111,10 @@ func (m *JointControllerState) Serialize(w io.Writer) (err error) {
 	}
 
 	if err = ros.SerializeMessageField(w, "float64", &m.IClamp); err != nil {
+		return err
+	}
+
+	if err = ros.SerializeMessageField(w, "bool", &m.Antiwindup); err != nil {
 		return err
 	}
 
@@ -169,6 +174,11 @@ func (m *JointControllerState) Deserialize(r io.Reader) (err error) {
 
 	// IClamp
 	if err = ros.DeserializeMessageField(r, "float64", &m.IClamp); err != nil {
+		return err
+	}
+
+	// Antiwindup
+	if err = ros.DeserializeMessageField(r, "bool", &m.Antiwindup); err != nil {
 		return err
 	}
 

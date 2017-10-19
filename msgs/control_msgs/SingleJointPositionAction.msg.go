@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionAction struct {
@@ -42,7 +42,7 @@ SingleJointPositionActionResult action_result
 SingleJointPositionActionFeedback action_feedback
 `,
 		"control_msgs/SingleJointPositionAction",
-		"d31fd05f88af960673f983d86a899f4d",
+		"c4a786b7d53e5d0983decf967a5a779e",
 	}
 )
 

@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGripperCommand struct {
@@ -39,7 +39,7 @@ var (
 float64 max_effort
 `,
 		"control_msgs/GripperCommand",
-		"102071f968d9f58f9424e0a4ebda152a",
+		"680acaff79486f017132a7f198d40f08",
 	}
 )
 

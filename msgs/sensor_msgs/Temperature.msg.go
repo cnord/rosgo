@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTemperature struct {
@@ -45,7 +45,7 @@ var (
 
  float64 variance        # 0 is interpreted as variance unknown`,
 		"sensor_msgs/Temperature",
-		"6f4df500b16d1d3a368880d4a5f5d097",
+		"ff71b307acdbe7c871a5a6d7ed359100",
 	}
 )
 

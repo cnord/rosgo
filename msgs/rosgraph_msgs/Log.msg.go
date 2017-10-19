@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLog struct {
@@ -59,7 +59,7 @@ uint32 line # line the message came from
 string[] topics # topic names that the node publishes
 `,
 		"rosgraph_msgs/Log",
-		"7e4c0d13ed75610b7a2bb18594155bf8",
+		"acffd30cd6b6de30f120938c17c593fb",
 	}
 )
 

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointState struct {
@@ -66,7 +66,7 @@ float64[] velocity
 float64[] effort
 `,
 		"sensor_msgs/JointState",
-		"c7c9a251ee705ea0c14a564fedcb85b1",
+		"3066dcd76a6cfaef579bd0f34173e9fd",
 	}
 )
 

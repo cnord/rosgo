@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgDiagnosticArray struct {
@@ -42,7 +42,7 @@ var (
 Header header #for timestamp
 DiagnosticStatus[] status # an array of components being reported on`,
 		"diagnostic_msgs/DiagnosticArray",
-		"5a7dd9a5697a73da9c54c05194f61e38",
+		"60810da900de1dd6ddd437c3503511da",
 	}
 )
 

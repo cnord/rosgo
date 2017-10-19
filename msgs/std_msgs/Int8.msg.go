@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInt8 struct {
@@ -38,7 +38,7 @@ var (
 		`int8 data
 `,
 		"std_msgs/Int8",
-		"09cdd02665af5f0d32bec3c40d0e8f62",
+		"27ffa0c9c4b8fb8492252bcad9e5c57b",
 	}
 )
 

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMarkerArray struct {
@@ -40,7 +40,7 @@ var (
 		`Marker[] markers
 `,
 		"visualization_msgs/MarkerArray",
-		"c1cbae8273e51c9b1c8fbc0d9c445d88",
+		"d155b9ce5188fbaf89745847fd5882d7",
 	}
 )
 

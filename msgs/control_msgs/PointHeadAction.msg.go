@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointHeadAction struct {
@@ -42,7 +42,7 @@ PointHeadActionResult action_result
 PointHeadActionFeedback action_feedback
 `,
 		"control_msgs/PointHeadAction",
-		"8d39aaeed5e9bfedc46fa857fb471ebf",
+		"7252920f1243de1b741f14f214125371",
 	}
 )
 

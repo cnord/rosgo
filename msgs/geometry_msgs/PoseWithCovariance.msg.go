@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPoseWithCovariance struct {
@@ -48,7 +48,7 @@ Pose pose
 float64[36] covariance
 `,
 		"geometry_msgs/PoseWithCovariance",
-		"4ec31161b30291389f54fb885685270a",
+		"c23e848cf1b7533a8d7c259073a97e6f",
 	}
 )
 

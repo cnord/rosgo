@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInertia struct {
@@ -53,7 +53,7 @@ float64 iyz
 float64 izz
 `,
 		"geometry_msgs/Inertia",
-		"f9eac69d7f8aaf44853616a958d7477f",
+		"1d26e4bb6c83ff141c5cf0d883c2b0fe",
 	}
 )
 

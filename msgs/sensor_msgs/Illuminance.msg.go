@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgIlluminance struct {
@@ -58,7 +58,7 @@ var (
 
  float64 variance        # 0 is interpreted as variance unknown`,
 		"sensor_msgs/Illuminance",
-		"10cf55f229d37dfb4f7e5cce8fb091ec",
+		"8cf5febb0952fca9d650c3d11a81a188",
 	}
 )
 

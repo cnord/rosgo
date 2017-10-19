@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTolerance struct {
@@ -52,7 +52,7 @@ float64 velocity  # in rad/sec or m/sec
 float64 acceleration  # in rad/sec^2 or m/sec^2
 `,
 		"control_msgs/JointTolerance",
-		"497c854e94a0a8974a8f8944087809db",
+		"f544fe9c16cf04547e135dd6063ff5be",
 	}
 )
 

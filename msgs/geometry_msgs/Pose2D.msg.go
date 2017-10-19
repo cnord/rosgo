@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPose2D struct {
@@ -41,7 +41,7 @@ float64 x
 float64 y
 float64 theta`,
 		"geometry_msgs/Pose2D",
-		"4e2f3fce2333423b30f6af38b9f2abd7",
+		"938fa65709584ad8e77d238529be13b8",
 	}
 )
 

@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointHeadActionFeedback struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 PointHeadFeedback feedback
 `,
 		"control_msgs/PointHeadActionFeedback",
-		"9130b1e1f7b30a434f83565d195ebfb5",
+		"33c9244957176bbba97dd641119e8460",
 	}
 )
 

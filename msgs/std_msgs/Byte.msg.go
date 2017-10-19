@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgByte struct {
@@ -38,7 +38,7 @@ var (
 		`byte data
 `,
 		"std_msgs/Byte",
-		"7e8554fdcd2c175293d2827e71ed3693",
+		"ad736a2e8818154c487bb80fe42ce43b",
 	}
 )
 

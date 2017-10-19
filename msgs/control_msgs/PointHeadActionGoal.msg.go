@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointHeadActionGoal struct {
@@ -44,13 +44,13 @@ actionlib_msgs/GoalID goal_id
 PointHeadGoal goal
 `,
 		"control_msgs/PointHeadActionGoal",
-		"d2151cff361301782a6ae486c4db45ab",
+		"b53a8323d0ba7b310ba17a2d3a82a6b8",
 	}
 )
 
 type PointHeadActionGoal struct {
 	Header std_msgs.Header
-	GoalID actionlib_msgs.GoalID
+	GoalId actionlib_msgs.GoalID
 	Goal   PointHeadGoal
 }
 
@@ -59,7 +59,7 @@ func (m *PointHeadActionGoal) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -76,8 +76,8 @@ func (m *PointHeadActionGoal) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

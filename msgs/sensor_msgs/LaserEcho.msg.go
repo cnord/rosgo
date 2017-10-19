@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLaserEcho struct {
@@ -43,7 +43,7 @@ var (
 float32[] echoes  # Multiple values of ranges or intensities.
                   # Each array represents data from the same angle increment.`,
 		"sensor_msgs/LaserEcho",
-		"a3954a3a9a7d9a6a5e18f4d98439be09",
+		"8bc5ae449b200fba4d552b4225586696",
 	}
 )
 

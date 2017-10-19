@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointCloud struct {
@@ -55,7 +55,7 @@ geometry_msgs/Point32[] points
 ChannelFloat32[] channels
 `,
 		"sensor_msgs/PointCloud",
-		"8fd83ffb348b4c6b507856d5fdaa54c2",
+		"d8e9c3f5afbdd8a130fd1d2763945fca",
 	}
 )
 

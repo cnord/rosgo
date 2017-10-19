@@ -6,8 +6,8 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/trajectory_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/trajectory_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectoryGoal struct {
@@ -40,7 +40,7 @@ var (
 trajectory_msgs/JointTrajectory trajectory
 `,
 		"control_msgs/JointTrajectoryGoal",
-		"fe6b77228470157b463f1c3615442c2d",
+		"2a0eff76c870e8595636c2a562ca298e",
 	}
 )
 

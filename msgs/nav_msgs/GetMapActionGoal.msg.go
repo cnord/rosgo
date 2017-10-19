@@ -6,9 +6,9 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGetMapActionGoal struct {
@@ -44,13 +44,13 @@ actionlib_msgs/GoalID goal_id
 GetMapGoal goal
 `,
 		"nav_msgs/GetMapActionGoal",
-		"ce89bc7a81ab5735d0eb84f8878348f1",
+		"4b30be6cd12b9e72826df56b481f40e0",
 	}
 )
 
 type GetMapActionGoal struct {
 	Header std_msgs.Header
-	GoalID actionlib_msgs.GoalID
+	GoalId actionlib_msgs.GoalID
 	Goal   GetMapGoal
 }
 
@@ -59,7 +59,7 @@ func (m *GetMapActionGoal) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -76,8 +76,8 @@ func (m *GetMapActionGoal) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

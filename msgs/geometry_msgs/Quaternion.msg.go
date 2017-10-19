@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgQuaternion struct {
@@ -43,7 +43,7 @@ float64 z
 float64 w
 `,
 		"geometry_msgs/Quaternion",
-		"4c29a42d17cc0d0a6ead2e4413ed0e21",
+		"a779879fadf0160734f906b8c19c7004",
 	}
 )
 

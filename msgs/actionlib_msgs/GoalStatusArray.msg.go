@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGoalStatusArray struct {
@@ -45,7 +45,7 @@ GoalStatus[] status_list
 
 `,
 		"actionlib_msgs/GoalStatusArray",
-		"12ef789174f5252c94b427cdb93b2d0a",
+		"8b2b82f13216d0a8ea88bd3af735e619",
 	}
 )
 

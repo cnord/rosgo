@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMarker struct {
@@ -85,14 +85,14 @@ string mesh_resource
 bool mesh_use_embedded_materials
 `,
 		"visualization_msgs/Marker",
-		"06f252f28e50b583ca77b8a19201f579",
+		"4048c9de2a16f4ae8e0538085ebf1b97",
 	}
 )
 
 type Marker struct {
 	Header                   std_msgs.Header
 	Ns                       string
-	ID                       int32
+	Id                       int32
 	Type                     int32
 	Action                   int32
 	Pose                     geometry_msgs.Pose
@@ -116,7 +116,7 @@ func (m *Marker) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "int32", &m.ID); err != nil {
+	if err = ros.SerializeMessageField(w, "int32", &m.Id); err != nil {
 		return err
 	}
 
@@ -196,8 +196,8 @@ func (m *Marker) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// ID
-	if err = ros.DeserializeMessageField(r, "int32", &m.ID); err != nil {
+	// Id
+	if err = ros.DeserializeMessageField(r, "int32", &m.Id); err != nil {
 		return err
 	}
 

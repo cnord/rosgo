@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiArrayLayout struct {
@@ -65,7 +65,7 @@ uint32 data_offset        # padding elements at front of data
 # multiarray(i,j,k) refers to the ith row, jth column, and kth channel.
 `,
 		"std_msgs/MultiArrayLayout",
-		"9e109a43d67cb5458e2e5239bb985dee",
+		"0fed2a11c13e11c5571b4e2a995a91a3",
 	}
 )
 

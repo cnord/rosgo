@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTwistWithCovarianceStamped struct {
@@ -41,7 +41,7 @@ Header header
 TwistWithCovariance twist
 `,
 		"geometry_msgs/TwistWithCovarianceStamped",
-		"f59b87b044187f26ef66329003c3d275",
+		"8927a1a12fb2607ceea095b2dc440a96",
 	}
 )
 

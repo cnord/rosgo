@@ -6,7 +6,7 @@ package nav_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgGetMapGoal struct {
@@ -39,7 +39,7 @@ var (
 # Get the map as a nav_msgs/OccupancyGrid
 `,
 		"nav_msgs/GetMapGoal",
-		"f1dc1c7cf7d5ef6d4fbd2db76ba527ec",
+		"d41d8cd98f00b204e9800998ecf8427e",
 	}
 )
 

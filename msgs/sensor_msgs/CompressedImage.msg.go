@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgCompressedImage struct {
@@ -53,7 +53,7 @@ string format        # Specifies the format of the data
 uint8[] data         # Compressed image buffer
 `,
 		"sensor_msgs/CompressedImage",
-		"d3795018f0b7f0b8b50b7ea3b4a7519b",
+		"8f7a12909da2c9d3332d540a0977563f",
 	}
 )
 

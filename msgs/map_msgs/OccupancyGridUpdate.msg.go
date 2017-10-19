@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgOccupancyGridUpdate struct {
@@ -46,7 +46,7 @@ uint32 height
 int8[] data
 `,
 		"map_msgs/OccupancyGridUpdate",
-		"0e77ea0b2c75ef93e687bbf87cbdb9b5",
+		"b295be292b335c34718bd939deebe1c9",
 	}
 )
 

@@ -6,8 +6,8 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSingleJointPositionFeedback struct {
@@ -44,7 +44,7 @@ float64 error
 
 `,
 		"control_msgs/SingleJointPositionFeedback",
-		"19f3192c841f11fa1c6f55b158c637bc",
+		"8cee65610a3d08e0a1bded82f146f1fd",
 	}
 )
 

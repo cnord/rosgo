@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgNavSatFix struct {
@@ -86,7 +86,7 @@ uint8 COVARIANCE_TYPE_KNOWN = 3
 uint8 position_covariance_type
 `,
 		"sensor_msgs/NavSatFix",
-		"5759544745c46283e170f1993e43802f",
+		"2d3a8cd499b9b4a0249fb98fd05cfa48",
 	}
 )
 

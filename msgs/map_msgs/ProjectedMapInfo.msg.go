@@ -6,7 +6,7 @@ package map_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgProjectedMapInfo struct {
@@ -48,7 +48,7 @@ float64 max_z`,
 )
 
 type ProjectedMapInfo struct {
-	FrameID string
+	FrameId string
 	X       float64
 	Y       float64
 	Width   float64
@@ -58,7 +58,7 @@ type ProjectedMapInfo struct {
 }
 
 func (m *ProjectedMapInfo) Serialize(w io.Writer) (err error) {
-	if err = ros.SerializeMessageField(w, "string", &m.FrameID); err != nil {
+	if err = ros.SerializeMessageField(w, "string", &m.FrameId); err != nil {
 		return err
 	}
 
@@ -90,8 +90,8 @@ func (m *ProjectedMapInfo) Serialize(w io.Writer) (err error) {
 }
 
 func (m *ProjectedMapInfo) Deserialize(r io.Reader) (err error) {
-	// FrameID
-	if err = ros.DeserializeMessageField(r, "string", &m.FrameID); err != nil {
+	// FrameId
+	if err = ros.DeserializeMessageField(r, "string", &m.FrameId); err != nil {
 		return err
 	}
 

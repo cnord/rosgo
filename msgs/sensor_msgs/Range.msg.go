@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgRange struct {
@@ -77,7 +77,7 @@ float32 range           # range data [m]
                         # +Inf represents no detection within the fixed distance.
                         # (Object out of range)`,
 		"sensor_msgs/Range",
-		"71e981252e448b5283f03f85f1f485dc",
+		"c005c34273dc426c67a020a87bc24148",
 	}
 )
 

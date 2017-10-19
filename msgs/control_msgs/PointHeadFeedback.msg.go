@@ -6,7 +6,7 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgPointHeadFeedback struct {
@@ -40,7 +40,7 @@ float64 pointing_angle_error
 
 `,
 		"control_msgs/PointHeadFeedback",
-		"f63925a3e030605205cdaa2de74041e9",
+		"cce80d27fd763682da8805a73316cab4",
 	}
 )
 

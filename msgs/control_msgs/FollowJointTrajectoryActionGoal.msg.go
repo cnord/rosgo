@@ -6,9 +6,9 @@ package control_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFollowJointTrajectoryActionGoal struct {
@@ -44,13 +44,13 @@ actionlib_msgs/GoalID goal_id
 FollowJointTrajectoryGoal goal
 `,
 		"control_msgs/FollowJointTrajectoryActionGoal",
-		"ea97e347ff08322557a8ca22058939c7",
+		"cff5c1d533bf2f82dd0138d57f4304bb",
 	}
 )
 
 type FollowJointTrajectoryActionGoal struct {
 	Header std_msgs.Header
-	GoalID actionlib_msgs.GoalID
+	GoalId actionlib_msgs.GoalID
 	Goal   FollowJointTrajectoryGoal
 }
 
@@ -59,7 +59,7 @@ func (m *FollowJointTrajectoryActionGoal) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	if err = ros.SerializeMessageField(w, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 
@@ -76,8 +76,8 @@ func (m *FollowJointTrajectoryActionGoal) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// GoalID
-	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalID); err != nil {
+	// GoalId
+	if err = ros.DeserializeMessageField(r, "actionlib_msgs/GoalID", &m.GoalId); err != nil {
 		return err
 	}
 

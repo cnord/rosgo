@@ -6,8 +6,8 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgQuaternionStamped struct {
@@ -42,7 +42,7 @@ Header header
 Quaternion quaternion
 `,
 		"geometry_msgs/QuaternionStamped",
-		"4a5c00199247da86fc3d583bf5af5ca6",
+		"e57f1e547e0e1fd13504588ffc8334e2",
 	}
 )
 

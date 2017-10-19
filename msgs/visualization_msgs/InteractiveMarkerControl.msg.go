@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInteractiveMarkerControl struct {
@@ -117,7 +117,7 @@ bool independent_marker_orientation
 string description
 `,
 		"visualization_msgs/InteractiveMarkerControl",
-		"7111ea3d3e9c0ded6ccecb4dc9532391",
+		"b3c81e785788195d1840b86c28da1aac",
 	}
 )
 

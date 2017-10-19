@@ -6,7 +6,7 @@ package geometry_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTwist struct {
@@ -40,7 +40,7 @@ Vector3  linear
 Vector3  angular
 `,
 		"geometry_msgs/Twist",
-		"7b067cfe31b410bffd4e416af2c10eb0",
+		"9f195f881246fdfa2798d1d3eebca84a",
 	}
 )
 

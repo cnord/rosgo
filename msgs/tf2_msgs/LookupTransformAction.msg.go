@@ -6,7 +6,7 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLookupTransformAction struct {
@@ -42,7 +42,7 @@ LookupTransformActionResult action_result
 LookupTransformActionFeedback action_feedback
 `,
 		"tf2_msgs/LookupTransformAction",
-		"ea0b675693e01bf415f75c692ea50172",
+		"7ee01ba91a56c2245c610992dbaa3c37",
 	}
 )
 

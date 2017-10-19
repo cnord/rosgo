@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSolidPrimitive struct {
@@ -81,7 +81,7 @@ uint8 CONE_HEIGHT=0
 uint8 CONE_RADIUS=1
 `,
 		"shape_msgs/SolidPrimitive",
-		"9121085a5b5bb159b33cd1739087e356",
+		"d8f8cbc74c5ff283fca29569ccefb45d",
 	}
 )
 

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgAccelWithCovariance struct {
@@ -48,7 +48,7 @@ Accel accel
 float64[36] covariance
 `,
 		"geometry_msgs/AccelWithCovariance",
-		"c48b3713c98db26549cd6f7fa86d1e4d",
+		"ad5a718d699c6be72a02b8d6a139f334",
 	}
 )
 

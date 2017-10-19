@@ -6,8 +6,8 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgFluidPressure struct {
@@ -49,7 +49,7 @@ var (
 
  float64 variance        # 0 is interpreted as variance unknown`,
 		"sensor_msgs/FluidPressure",
-		"5e1f2afd9baba840a94545a2e3475a2f",
+		"804dc5cea1c5306d6a2eb80b9833befe",
 	}
 )
 

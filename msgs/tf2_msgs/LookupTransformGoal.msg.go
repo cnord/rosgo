@@ -6,7 +6,7 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLookupTransformGoal struct {
@@ -51,7 +51,7 @@ bool advanced
 
 `,
 		"tf2_msgs/LookupTransformGoal",
-		"8cc5f822256e11b7311c2088bd622d9e",
+		"35e3720468131d675a18bb6f3e5f22f8",
 	}
 )
 

@@ -6,7 +6,7 @@ package sensor_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgNavSatStatus struct {
@@ -59,7 +59,7 @@ uint16 SERVICE_GALILEO = 8
 uint16 service
 `,
 		"sensor_msgs/NavSatStatus",
-		"55f78e1710412e6c825c1b8cf022525a",
+		"331cdbddfa4bc96ffc3b9ad98900a54c",
 	}
 )
 

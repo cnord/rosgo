@@ -6,9 +6,9 @@ package visualization_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/geometry_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/geometry_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgInteractiveMarkerPose struct {
@@ -48,7 +48,7 @@ geometry_msgs/Pose pose
 string name
 `,
 		"visualization_msgs/InteractiveMarkerPose",
-		"848ac869b9cb4c4d85af9cbd2ac09bcf",
+		"a6e6833209a196a38d798dadb02c81f8",
 	}
 )
 

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgSmachContainerInitialStatusCmd struct {
@@ -49,7 +49,7 @@ string[] initial_states
 string local_data
 `,
 		"smach_msgs/SmachContainerInitialStatusCmd",
-		"adc36b24724296122a9b20a95c24b1a4",
+		"45f8cf31fc29b829db77f23001f788d6",
 	}
 )
 

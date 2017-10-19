@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMultiDOFJointTrajectory struct {
@@ -50,7 +50,7 @@ string[] joint_names
 MultiDOFJointTrajectoryPoint[] points
 `,
 		"trajectory_msgs/MultiDOFJointTrajectory",
-		"e19d4216caa321543b869ca5b1f5e224",
+		"ef145a45a5f47b77b7f5cdde4b16c942",
 	}
 )
 

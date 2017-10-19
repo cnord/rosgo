@@ -6,7 +6,7 @@ package std_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgUInt16 struct {
@@ -38,7 +38,7 @@ var (
 		`uint16 data
 `,
 		"std_msgs/UInt16",
-		"fd863ad7ac309d337ff46193bc0af4c0",
+		"1df79edf208b629fe6b81923a544552d",
 	}
 )
 

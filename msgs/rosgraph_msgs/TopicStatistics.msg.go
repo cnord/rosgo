@@ -6,7 +6,7 @@ package rosgraph_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgTopicStatistics struct {
@@ -69,7 +69,7 @@ duration stamp_age_stddev
 duration stamp_age_max
 `,
 		"rosgraph_msgs/TopicStatistics",
-		"af8d88facaf0dd2a8692bed50ab41bda",
+		"10152ed868c5097a5e2e4a89d7daa710",
 	}
 )
 

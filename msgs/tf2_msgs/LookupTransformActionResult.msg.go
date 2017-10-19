@@ -6,9 +6,9 @@ package tf2_msgs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/msgs/actionlib_msgs"
-	"github.com/ppg/rosgo/msgs/std_msgs"
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/msgs/actionlib_msgs"
+	"github.com/cnord/rosgo/msgs/std_msgs"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgLookupTransformActionResult struct {
@@ -44,7 +44,7 @@ actionlib_msgs/GoalStatus status
 LookupTransformResult result
 `,
 		"tf2_msgs/LookupTransformActionResult",
-		"244c023081ddbc63593feb4550984b44",
+		"ac26ce75a41384fa8bb4dc10f491ab90",
 	}
 )
 

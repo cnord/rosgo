@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgJointTrajectoryPoint struct {
@@ -48,7 +48,7 @@ float64[] effort
 duration time_from_start
 `,
 		"trajectory_msgs/JointTrajectoryPoint",
-		"0b7b3d8dcc88390331fe8287246f673f",
+		"f3cd1e1c4d320c79d6985c904ae5dcd3",
 	}
 )
 

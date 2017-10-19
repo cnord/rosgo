@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 type _MsgMeshTriangle struct {
@@ -41,7 +41,7 @@ var (
 uint32[3] vertex_indices
 `,
 		"shape_msgs/MeshTriangle",
-		"9f61477ed8ee061cb6d71555c375ad8f",
+		"23688b2e6d2de3d32fe8af104a903253",
 	}
 )
 
