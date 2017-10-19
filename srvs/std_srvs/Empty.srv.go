@@ -6,7 +6,7 @@ package std_srvs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 // Service type metadata
@@ -75,7 +75,7 @@ var (
 	MsgEmptyRequest = &_MsgEmptyRequest{
 		``,
 		"std_srvs/EmptyRequest",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"",
 	}
 )
 
@@ -120,7 +120,7 @@ var (
 	MsgEmptyResponse = &_MsgEmptyResponse{
 		``,
 		"std_srvs/EmptyResponse",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"",
 	}
 )
 
