@@ -11,6 +11,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"regexp"
 	"sort"
@@ -23,6 +24,7 @@ import (
 )
 
 var (
+	uribase     string = "github.com/cnord"
 	infile      string
 	outfile     string
 	packageName string
@@ -208,7 +210,7 @@ func (m MsgSpec) Packages() (ret []string) {
 //string HOGE=hoge
 var constMatcher = regexp.MustCompile(`^([\w/]+)\s+(\w+)\s*=\s*(\w+)`)
 
-//Header h # go:package=github.com/ppg/rosgo/msgs/std_msgs
+//Header h # go:package=github.com/cnord/rosgo/msgs/std_msgs
 //byte b
 //std_msgs/ColorRGBA c
 //uint32[] dyn_ary
@@ -216,7 +218,7 @@ var constMatcher = regexp.MustCompile(`^([\w/]+)\s+(\w+)\s*=\s*(\w+)`)
 //std_msgs/ColorRGBA[] msg_ary
 var fieldMatcher = regexp.MustCompile(`^([\w/]+)(\[(\d*)\])?\s+(\w+)`)
 
-// go:package=github.com/ppg/rosgo/msgs/std_msgs
+// go:package=github.com/cnord/rosgo/msgs/std_msgs
 var goOptionMatcher = regexp.MustCompile(`go:(\w+)=([^\s]+)`)
 
 //uint8 status
@@ -224,11 +226,15 @@ var goOptionMatcher = regexp.MustCompile(`go:(\w+)=([^\s]+)`)
 func parseMsgSpec(packageName, name string, data []byte) (*MsgSpec, error) {
 	spec := new(MsgSpec)
 	spec.Raw = string(data)
-	spec.MD5Sum = fmt.Sprintf("%x", md5.Sum(data))
+	md5sum, err := exec.Command("rosmsg", "md5", fmt.Sprintf("%s/%s", packageName, name)).Output()
+	if err != nil {
+		return nil, err
+	}
+	spec.MD5Sum = strings.Trim(string(md5sum), " \n")
 	spec.PackageName = packageName
 	spec.Name = name
 
-	spec.packageMap = map[string]struct{}{"github.com/ppg/rosgo/ros": struct{}{}}
+	spec.packageMap = map[string]struct{}{uribase+"/rosgo/ros": struct{}{}}
 
 	// Read the data line by line
 	buf := bytes.NewBuffer(data)
@@ -438,14 +444,17 @@ func (s SrvSpec) Packages() (ret []string) {
 func parseSrvSpec(packageName, name string, data []byte) (*SrvSpec, error) {
 	spec := new(SrvSpec)
 	spec.Raw = string(data)
-	spec.MD5Sum = fmt.Sprintf("%x", md5.Sum(data))
+	md5sum, err := exec.Command("rossrv", "md5", fmt.Sprintf("%s/%s", packageName, name)).Output()
+	if err != nil {
+		return nil, err
+	}
+	spec.MD5Sum = strings.Trim(string(md5sum), " \n")
 	spec.PackageName = packageName
 	spec.Name = name
 
-	spec.packageMap = map[string]struct{}{"github.com/ppg/rosgo/ros": struct{}{}}
+	spec.packageMap = map[string]struct{}{uribase+"/rosgo/ros": struct{}{}}
 
 	raws := strings.Split(string(data), "---")
-	var err error
 	spec.RequestSpec, err = parseMsgSpec(packageName, fmt.Sprintf("%sRequest", name), []byte(raws[0]))
 	if err != nil {
 		return nil, err
@@ -462,11 +471,6 @@ func parseSrvSpec(packageName, name string, data []byte) (*SrvSpec, error) {
 	for k := range spec.ResponseSpec.packageMap {
 		spec.packageMap[k] = struct{}{}
 	}
-
-	log.Printf("spec.MD5Sum: %s", spec.MD5Sum)
-	log.Printf("spec.RequestSpec.MD5Sum: %s", spec.RequestSpec.MD5Sum)
-	// FIXME(ppg): why does it expect the srv spec to have the MD5 sum of the request (and maybe response) instead of its md5sum?
-	spec.MD5Sum = spec.RequestSpec.MD5Sum
 
 	return spec, nil
 }
@@ -498,22 +502,25 @@ var builtInInfo = map[string]goInfo{
 }
 
 var builtInImports = map[string]string{
-	"actionlib_msgs":     "github.com/ppg/rosgo/msgs/actionlib_msgs",
-	"common_msgs":        "github.com/ppg/rosgo/msgs/common_msgs",
-	"control_msgs":       "github.com/ppg/rosgo/msgs/control_msgs",
-	"diagnostic_msgs":    "github.com/ppg/rosgo/msgs/diagnostic_msgs",
-	"geometry_msgs":      "github.com/ppg/rosgo/msgs/geometry_msgs",
-	"map_msgs":           "github.com/ppg/rosgo/msgs/map_msgs",
-	"nav_msgs":           "github.com/ppg/rosgo/msgs/nav_msgs",
-	"rosgraph_msgs":      "github.com/ppg/rosgo/msgs/rosgraph_msgs",
-	"sensor_msgs":        "github.com/ppg/rosgo/msgs/sensor_msgs",
-	"shape_msgs":         "github.com/ppg/rosgo/msgs/shape_msgs",
-	"smach_msgs":         "github.com/ppg/rosgo/msgs/smach_msgs",
-	"std_msgs":           "github.com/ppg/rosgo/msgs/std_msgs",
-	"stereo_msgs":        "github.com/ppg/rosgo/msgs/stereo_msgs",
-	"tf2_msgs":           "github.com/ppg/rosgo/msgs/tf2_msgs",
-	"trajectory_msgs":    "github.com/ppg/rosgo/msgs/trajectory_msgs",
-	"visualization_msgs": "github.com/ppg/rosgo/msgs/visualization_msgs",
+	"actionlib_msgs":     uribase+"/rosgo/msgs/actionlib_msgs",
+	"common_msgs":        uribase+"/rosgo/msgs/common_msgs",
+	"control_msgs":       uribase+"/rosgo/msgs/control_msgs",
+	"diagnostic_msgs":    uribase+"/rosgo/msgs/diagnostic_msgs",
+	"geographic_msgs":    uribase+"/rosgo/msgs/geographic_msgs",
+	"geometry_msgs":      uribase+"/rosgo/msgs/geometry_msgs",
+	"map_msgs":           uribase+"/rosgo/msgs/map_msgs",
+	"mavros_msgs":        uribase+"/rosgo/msgs/mavros_msgs",
+	"nav_msgs":           uribase+"/rosgo/msgs/nav_msgs",
+	"rosgraph_msgs":      uribase+"/rosgo/msgs/rosgraph_msgs",
+	"sensor_msgs":        uribase+"/rosgo/msgs/sensor_msgs",
+	"shape_msgs":         uribase+"/rosgo/msgs/shape_msgs",
+	"smach_msgs":         uribase+"/rosgo/msgs/smach_msgs",
+	"std_msgs":           uribase+"/rosgo/msgs/std_msgs",
+	"stereo_msgs":        uribase+"/rosgo/msgs/stereo_msgs",
+	"tf2_msgs":           uribase+"/rosgo/msgs/tf2_msgs",
+	"trajectory_msgs":    uribase+"/rosgo/msgs/trajectory_msgs",
+	"visualization_msgs": uribase+"/rosgo/msgs/visualization_msgs",
+	"uuid_msgs":          uribase+"/rosgo/msgs/uuid_msgs",
 }
 
 // snakeToCamel returns a string converted from snake case to uppercase
