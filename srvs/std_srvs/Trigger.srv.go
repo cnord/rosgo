@@ -6,7 +6,7 @@ package std_srvs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 // Service type metadata
@@ -30,7 +30,7 @@ func (t *_SrvTrigger) NewService() ros.Service {
 var (
 	SrvTrigger = &_SrvTrigger{
 		"std_srvs/Trigger",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"937c9679a518e3a18d831e57125ea522",
 		`---
 bool success   # indicate successful run of triggered service
 string message # informational, e.g. for error messages
@@ -78,7 +78,7 @@ var (
 	MsgTriggerRequest = &_MsgTriggerRequest{
 		``,
 		"std_srvs/TriggerRequest",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"",
 	}
 )
 
@@ -126,7 +126,7 @@ bool success   # indicate successful run of triggered service
 string message # informational, e.g. for error messages
 `,
 		"std_srvs/TriggerResponse",
-		"7bec9fbe319affc86fe89a5114580b78",
+		"",
 	}
 )
 

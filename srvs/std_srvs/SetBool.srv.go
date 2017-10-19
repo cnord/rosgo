@@ -6,7 +6,7 @@ package std_srvs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 // Service type metadata
@@ -30,7 +30,7 @@ func (t *_SrvSetBool) NewService() ros.Service {
 var (
 	SrvSetBool = &_SrvSetBool{
 		"std_srvs/SetBool",
-		"e3669e693e08eccee0f27d72171188a9",
+		"09fb03525b03e7ea1fd3992bafd87e16",
 		`bool data # e.g. for hardware enabling / disabling
 ---
 bool success   # indicate successful run of triggered service
@@ -80,7 +80,7 @@ var (
 		`bool data # e.g. for hardware enabling / disabling
 `,
 		"std_srvs/SetBoolRequest",
-		"e3669e693e08eccee0f27d72171188a9",
+		"",
 	}
 )
 
@@ -138,7 +138,7 @@ bool success   # indicate successful run of triggered service
 string message # informational, e.g. for error messages
 `,
 		"std_srvs/SetBoolResponse",
-		"7bec9fbe319affc86fe89a5114580b78",
+		"",
 	}
 )
 
