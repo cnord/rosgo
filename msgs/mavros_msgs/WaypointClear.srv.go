@@ -81,7 +81,7 @@ var (
 
 `,
 		"mavros_msgs/WaypointClearRequest",
-		"",
+		"358e233cde0c8a8bcfea4ce193f8fc15",
 	}
 )
 
@@ -128,7 +128,7 @@ var (
 bool success
 `,
 		"mavros_msgs/WaypointClearResponse",
-		"",
+		"358e233cde0c8a8bcfea4ce193f8fc15",
 	}
 )
 

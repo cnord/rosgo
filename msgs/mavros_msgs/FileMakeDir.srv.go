@@ -90,7 +90,7 @@ var (
 string dir_path
 `,
 		"mavros_msgs/FileMakeDirRequest",
-		"",
+		"f140c5ef05b00c3cfc30d5a2061b4d63",
 	}
 )
 
@@ -148,7 +148,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileMakeDirResponse",
-		"",
+		"f140c5ef05b00c3cfc30d5a2061b4d63",
 	}
 )
 

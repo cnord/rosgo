@@ -92,7 +92,7 @@ float32 longitude
 float32 altitude
 `,
 		"mavros_msgs/CommandTOLRequest",
-		"",
+		"93ff4eaa9907f58c0e7a909cddce23e2",
 	}
 )
 
@@ -190,7 +190,7 @@ bool success
 uint8 result
 `,
 		"mavros_msgs/CommandTOLResponse",
-		"",
+		"93ff4eaa9907f58c0e7a909cddce23e2",
 	}
 )
 

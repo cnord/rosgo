@@ -84,7 +84,7 @@ var (
 string param_id
 `,
 		"mavros_msgs/ParamGetRequest",
-		"",
+		"777d24d2a7ab1765ef009a69f464d2bc",
 	}
 )
 
@@ -142,7 +142,7 @@ bool success
 ParamValue value
 `,
 		"mavros_msgs/ParamGetResponse",
-		"",
+		"777d24d2a7ab1765ef009a69f464d2bc",
 	}
 )
 

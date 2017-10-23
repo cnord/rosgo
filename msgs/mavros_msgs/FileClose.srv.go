@@ -92,7 +92,7 @@ var (
 string file_path
 `,
 		"mavros_msgs/FileCloseRequest",
-		"",
+		"1c309002d7f7c6df7d3f094925ea8e10",
 	}
 )
 
@@ -150,7 +150,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileCloseResponse",
-		"",
+		"1c309002d7f7c6df7d3f094925ea8e10",
 	}
 )
 

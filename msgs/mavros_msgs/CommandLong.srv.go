@@ -105,7 +105,7 @@ float32 param6	# y_lon
 float32 param7	# z_alt
 `,
 		"mavros_msgs/CommandLongRequest",
-		"",
+		"eb9034afc87577c0a235d45b8f3437d2",
 	}
 )
 
@@ -254,7 +254,7 @@ bool success
 uint8 result
 `,
 		"mavros_msgs/CommandLongResponse",
-		"",
+		"eb9034afc87577c0a235d45b8f3437d2",
 	}
 )
 

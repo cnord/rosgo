@@ -117,7 +117,7 @@ uint8 base_mode		# filled by MAV_MODE enum value or 0 if custom_mode != ''
 string custom_mode	# string mode representation or integer
 `,
 		"mavros_msgs/SetModeRequest",
-		"",
+		"e4f18fa93379f9ff1780d270ce110203",
 	}
 )
 
@@ -184,7 +184,7 @@ var (
 bool mode_sent		# Mode known/parsed correctly and SET_MODE are sent
 `,
 		"mavros_msgs/SetModeResponse",
-		"",
+		"e4f18fa93379f9ff1780d270ce110203",
 	}
 )
 

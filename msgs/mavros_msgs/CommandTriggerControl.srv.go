@@ -86,7 +86,7 @@ bool    trigger_enable		# Trigger on/off control
 float32 cycle_time		# Camera trigger cycle time. Zero to use current onboard value.
 `,
 		"mavros_msgs/CommandTriggerControlRequest",
-		"",
+		"7036c5f362c09a051915015871ce633d",
 	}
 )
 
@@ -154,7 +154,7 @@ bool success
 uint8 result
 `,
 		"mavros_msgs/CommandTriggerControlResponse",
-		"",
+		"7036c5f362c09a051915015871ce633d",
 	}
 )
 

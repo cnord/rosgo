@@ -109,7 +109,7 @@ int32 y	# longitude in deg * 1E7 or local y * 1E4 m
 float32 z	# altitude
 `,
 		"mavros_msgs/CommandIntRequest",
-		"",
+		"5d5fd287bf3d27ad6ec508b1692f3b09",
 	}
 )
 
@@ -278,7 +278,7 @@ bool success
 # so no result field
 `,
 		"mavros_msgs/CommandIntResponse",
-		"",
+		"5d5fd287bf3d27ad6ec508b1692f3b09",
 	}
 )
 

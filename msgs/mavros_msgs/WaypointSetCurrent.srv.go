@@ -87,7 +87,7 @@ var (
 uint16 wp_seq
 `,
 		"mavros_msgs/WaypointSetCurrentRequest",
-		"",
+		"f99aa1a911a80ab546ea470f4e90c807",
 	}
 )
 
@@ -144,7 +144,7 @@ var (
 bool success
 `,
 		"mavros_msgs/WaypointSetCurrentResponse",
-		"",
+		"f99aa1a911a80ab546ea470f4e90c807",
 	}
 )
 

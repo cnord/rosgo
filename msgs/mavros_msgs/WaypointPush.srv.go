@@ -96,7 +96,7 @@ uint16 start_index
 mavros_msgs/Waypoint[] waypoints
 `,
 		"mavros_msgs/WaypointPushRequest",
-		"",
+		"5b2bca74e830798e1579b58cafd50527",
 	}
 )
 
@@ -181,7 +181,7 @@ bool success
 uint32 wp_transfered
 `,
 		"mavros_msgs/WaypointPushResponse",
-		"",
+		"5b2bca74e830798e1579b58cafd50527",
 	}
 )
 

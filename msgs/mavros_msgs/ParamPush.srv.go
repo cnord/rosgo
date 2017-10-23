@@ -86,7 +86,7 @@ var (
 
 `,
 		"mavros_msgs/ParamPushRequest",
-		"",
+		"d3fc4d8cefa193382985a92a041a2a3d",
 	}
 )
 
@@ -134,7 +134,7 @@ bool success
 uint32 param_transfered
 `,
 		"mavros_msgs/ParamPushResponse",
-		"",
+		"d3fc4d8cefa193382985a92a041a2a3d",
 	}
 )
 
