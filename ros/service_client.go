@@ -12,11 +12,12 @@ import (
 )
 
 type defaultServiceClient struct {
-	logger    Logger
-	service   string
-	srvType   ServiceType
-	masterUri string
-	nodeId    string
+	logger      Logger
+	service     string
+	srvType     ServiceType
+	masterUri   string
+	nodeId      string
+	connTimeout time.Duration
 }
 
 func newDefaultServiceClient(logger Logger, nodeId string, masterUri string, service string, srvType ServiceType) *defaultServiceClient {
@@ -26,7 +27,12 @@ func newDefaultServiceClient(logger Logger, nodeId string, masterUri string, ser
 	client.srvType = srvType
 	client.masterUri = masterUri
 	client.nodeId = nodeId
+	client.SetTimeout(10 * time.Millisecond)
 	return client
+}
+
+func (c *defaultServiceClient) SetTimeout(delay time.Duration) {
+	c.connTimeout = delay
 }
 
 func (c *defaultServiceClient) Call(srv Service) error {
@@ -65,13 +71,13 @@ func (c *defaultServiceClient) Call(srv Service) error {
 	for _, h := range headers {
 		logger.Debugf("  `%s` = `%s`", h.key, h.value)
 	}
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	if err = writeConnectionHeader(headers, conn); err != nil {
 		return err
 	}
 
 	// 2. Read reponse header
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	if resHeaders, readErr := readConnectionHeader(conn); readErr != nil {
 		return readErr
 	} else {
@@ -92,30 +98,30 @@ func (c *defaultServiceClient) Call(srv Service) error {
 	_ = srv.ReqMessage().Serialize(&buf)
 	reqMsg := buf.Bytes()
 	size := uint32(len(reqMsg))
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	if err = binary.Write(conn, binary.LittleEndian, size); err != nil {
 		return err
 	}
 	logger.Debug(len(reqMsg))
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	if _, err = conn.Write(reqMsg); err != nil {
 		return err
 	}
 
 	// 4. Read OK byte
 	var ok byte
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	if err = binary.Read(conn, binary.LittleEndian, &ok); err != nil {
 		return err
 	} else {
 		if ok == 0 {
 			var size uint32
-			conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+			conn.SetDeadline(time.Now().Add(c.connTimeout))
 			if err = binary.Read(conn, binary.LittleEndian, &size); err != nil {
 				return err
 			} else {
 				errMsg := make([]byte, int(size))
-				conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+				conn.SetDeadline(time.Now().Add(c.connTimeout))
 				if _, err = io.ReadFull(conn, errMsg); err != nil {
 					return err
 				} else {
@@ -126,7 +132,7 @@ func (c *defaultServiceClient) Call(srv Service) error {
 	}
 
 	// 5. Receive response
-	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
+	conn.SetDeadline(time.Now().Add(c.connTimeout))
 	//logger.Debug("Reading message size...")
 	var msgSize uint32
 	if err = binary.Read(conn, binary.LittleEndian, &msgSize); err != nil {
