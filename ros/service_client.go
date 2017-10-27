@@ -12,11 +12,11 @@ import (
 )
 
 type defaultServiceClient struct {
-	logger    Logger
-	service   string
-	srvType   ServiceType
-	masterUri string
-	nodeId    string
+	logger      Logger
+	service     string
+	srvType     ServiceType
+	masterUri   string
+	nodeId      string
 	connTimeout time.Duration
 }
 
