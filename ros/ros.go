@@ -82,4 +82,5 @@ type ServiceServer interface {
 type ServiceClient interface {
 	Call(srv Service) error
 	Shutdown()
+	SetDeadline(uint32)
 }
