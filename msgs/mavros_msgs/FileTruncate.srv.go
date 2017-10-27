@@ -92,7 +92,7 @@ string file_path
 uint64 length
 `,
 		"mavros_msgs/FileTruncateRequest",
-		"71bf45fe3600fc220a82346ce1d1430c",
+		"",
 	}
 )
 
@@ -160,7 +160,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileTruncateResponse",
-		"71bf45fe3600fc220a82346ce1d1430c",
+		"",
 	}
 )
 

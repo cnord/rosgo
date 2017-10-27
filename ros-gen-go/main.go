@@ -234,7 +234,7 @@ func parseMsgSpec(packageName, name string, data []byte) (*MsgSpec, error) {
 	spec.PackageName = packageName
 	spec.Name = name
 
-	spec.packageMap = map[string]struct{}{uribase+"/rosgo/ros": struct{}{}}
+	spec.packageMap = map[string]struct{}{uribase + "/rosgo/ros": struct{}{}}
 
 	// Read the data line by line
 	buf := bytes.NewBuffer(data)
@@ -452,7 +452,7 @@ func parseSrvSpec(packageName, name string, data []byte) (*SrvSpec, error) {
 	spec.PackageName = packageName
 	spec.Name = name
 
-	spec.packageMap = map[string]struct{}{uribase+"/rosgo/ros": struct{}{}}
+	spec.packageMap = map[string]struct{}{uribase + "/rosgo/ros": struct{}{}}
 
 	raws := strings.Split(string(data), "---")
 	spec.RequestSpec, err = parseMsgSpec(packageName, fmt.Sprintf("%sRequest", name), []byte(raws[0]))
@@ -502,25 +502,25 @@ var builtInInfo = map[string]goInfo{
 }
 
 var builtInImports = map[string]string{
-	"actionlib_msgs":     uribase+"/rosgo/msgs/actionlib_msgs",
-	"common_msgs":        uribase+"/rosgo/msgs/common_msgs",
-	"control_msgs":       uribase+"/rosgo/msgs/control_msgs",
-	"diagnostic_msgs":    uribase+"/rosgo/msgs/diagnostic_msgs",
-	"geographic_msgs":    uribase+"/rosgo/msgs/geographic_msgs",
-	"geometry_msgs":      uribase+"/rosgo/msgs/geometry_msgs",
-	"map_msgs":           uribase+"/rosgo/msgs/map_msgs",
-	"mavros_msgs":        uribase+"/rosgo/msgs/mavros_msgs",
-	"nav_msgs":           uribase+"/rosgo/msgs/nav_msgs",
-	"rosgraph_msgs":      uribase+"/rosgo/msgs/rosgraph_msgs",
-	"sensor_msgs":        uribase+"/rosgo/msgs/sensor_msgs",
-	"shape_msgs":         uribase+"/rosgo/msgs/shape_msgs",
-	"smach_msgs":         uribase+"/rosgo/msgs/smach_msgs",
-	"std_msgs":           uribase+"/rosgo/msgs/std_msgs",
-	"stereo_msgs":        uribase+"/rosgo/msgs/stereo_msgs",
-	"tf2_msgs":           uribase+"/rosgo/msgs/tf2_msgs",
-	"trajectory_msgs":    uribase+"/rosgo/msgs/trajectory_msgs",
-	"visualization_msgs": uribase+"/rosgo/msgs/visualization_msgs",
-	"uuid_msgs":          uribase+"/rosgo/msgs/uuid_msgs",
+	"actionlib_msgs":     uribase + "/rosgo/msgs/actionlib_msgs",
+	"common_msgs":        uribase + "/rosgo/msgs/common_msgs",
+	"control_msgs":       uribase + "/rosgo/msgs/control_msgs",
+	"diagnostic_msgs":    uribase + "/rosgo/msgs/diagnostic_msgs",
+	"geographic_msgs":    uribase + "/rosgo/msgs/geographic_msgs",
+	"geometry_msgs":      uribase + "/rosgo/msgs/geometry_msgs",
+	"map_msgs":           uribase + "/rosgo/msgs/map_msgs",
+	"mavros_msgs":        uribase + "/rosgo/msgs/mavros_msgs",
+	"nav_msgs":           uribase + "/rosgo/msgs/nav_msgs",
+	"rosgraph_msgs":      uribase + "/rosgo/msgs/rosgraph_msgs",
+	"sensor_msgs":        uribase + "/rosgo/msgs/sensor_msgs",
+	"shape_msgs":         uribase + "/rosgo/msgs/shape_msgs",
+	"smach_msgs":         uribase + "/rosgo/msgs/smach_msgs",
+	"std_msgs":           uribase + "/rosgo/msgs/std_msgs",
+	"stereo_msgs":        uribase + "/rosgo/msgs/stereo_msgs",
+	"tf2_msgs":           uribase + "/rosgo/msgs/tf2_msgs",
+	"trajectory_msgs":    uribase + "/rosgo/msgs/trajectory_msgs",
+	"visualization_msgs": uribase + "/rosgo/msgs/visualization_msgs",
+	"uuid_msgs":          uribase + "/rosgo/msgs/uuid_msgs",
 }
 
 // snakeToCamel returns a string converted from snake case to uppercase
@@ -559,29 +559,29 @@ var commonInitialisms = map[string]bool{
 	"HTTP":  true,
 	"HTTPS": true,
 	//"ID":    true,
-	"IP":    true,
-	"JSON":  true,
-	"LHS":   true,
-	"QPS":   true,
-	"RAM":   true,
-	"RHS":   true,
-	"RPC":   true,
-	"SLA":   true,
-	"SMTP":  true,
-	"SQL":   true,
-	"SSH":   true,
-	"TCP":   true,
-	"TLS":   true,
+	"IP":   true,
+	"JSON": true,
+	"LHS":  true,
+	"QPS":  true,
+	"RAM":  true,
+	"RHS":  true,
+	"RPC":  true,
+	"SLA":  true,
+	"SMTP": true,
+	"SQL":  true,
+	"SSH":  true,
+	"TCP":  true,
+	"TLS":  true,
 	//"TTL":   true,
-	"UDP":   true,
-	"UI":    true,
-	"UID":   true,
-	"UUID":  true,
-	"URI":   true,
-	"URL":   true,
-	"UTF8":  true,
-	"VM":    true,
-	"XML":   true,
-	"XSRF":  true,
-	"XSS":   true,
+	"UDP":  true,
+	"UI":   true,
+	"UID":  true,
+	"UUID": true,
+	"URI":  true,
+	"URL":  true,
+	"UTF8": true,
+	"VM":   true,
+	"XML":  true,
+	"XSRF": true,
+	"XSS":  true,
 }

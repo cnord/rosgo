@@ -88,7 +88,7 @@ var (
 bool force_pull
 `,
 		"mavros_msgs/ParamPullRequest",
-		"c9628aea2226088718fd240fbd62afc7",
+		"",
 	}
 )
 
@@ -146,7 +146,7 @@ bool success
 uint32 param_received
 `,
 		"mavros_msgs/ParamPullResponse",
-		"c9628aea2226088718fd240fbd62afc7",
+		"",
 	}
 )
 

@@ -84,7 +84,7 @@ var (
 bool value
 `,
 		"mavros_msgs/CommandBoolRequest",
-		"e09abbb4e5bae6b558e5010966eb6e9e",
+		"",
 	}
 )
 
@@ -142,7 +142,7 @@ bool success
 uint8 result
 `,
 		"mavros_msgs/CommandBoolResponse",
-		"e09abbb4e5bae6b558e5010966eb6e9e",
+		"",
 	}
 )
 

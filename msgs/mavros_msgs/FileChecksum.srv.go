@@ -95,7 +95,7 @@ var (
 string file_path
 `,
 		"mavros_msgs/FileChecksumRequest",
-		"c32158e17d9a1a1c682fe19adbd29fac",
+		"",
 	}
 )
 
@@ -154,7 +154,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileChecksumResponse",
-		"c32158e17d9a1a1c682fe19adbd29fac",
+		"",
 	}
 )
 

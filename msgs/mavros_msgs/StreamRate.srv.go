@@ -108,7 +108,7 @@ uint16 message_rate
 bool on_off
 `,
 		"mavros_msgs/StreamRateRequest",
-		"d12f7661724c8ba25f67ba597bb7d039",
+		"",
 	}
 )
 
@@ -184,7 +184,7 @@ var (
 		`
 `,
 		"mavros_msgs/StreamRateResponse",
-		"d12f7661724c8ba25f67ba597bb7d039",
+		"",
 	}
 )
 

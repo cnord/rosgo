@@ -99,7 +99,7 @@ uint64 offset
 uint64 size
 `,
 		"mavros_msgs/FileReadRequest",
-		"7700526a6a54d8971e0db6dc1d712523",
+		"",
 	}
 )
 
@@ -178,7 +178,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileReadResponse",
-		"7700526a6a54d8971e0db6dc1d712523",
+		"",
 	}
 )
 

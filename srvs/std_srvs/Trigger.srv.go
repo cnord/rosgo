@@ -78,7 +78,7 @@ var (
 	MsgTriggerRequest = &_MsgTriggerRequest{
 		``,
 		"std_srvs/TriggerRequest",
-		"937c9679a518e3a18d831e57125ea522",
+		"",
 	}
 )
 
@@ -126,7 +126,7 @@ bool success   # indicate successful run of triggered service
 string message # informational, e.g. for error messages
 `,
 		"std_srvs/TriggerResponse",
-		"937c9679a518e3a18d831e57125ea522",
+		"",
 	}
 )
 

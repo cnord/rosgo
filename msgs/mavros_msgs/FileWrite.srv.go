@@ -98,7 +98,7 @@ uint64 offset
 uint8[] data
 `,
 		"mavros_msgs/FileWriteRequest",
-		"7d7e0ed4d86797a80355795ee6728fac",
+		"",
 	}
 )
 
@@ -193,7 +193,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileWriteResponse",
-		"7d7e0ed4d86797a80355795ee6728fac",
+		"",
 	}
 )
 

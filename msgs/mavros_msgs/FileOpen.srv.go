@@ -105,7 +105,7 @@ string file_path
 uint8 mode
 `,
 		"mavros_msgs/FileOpenRequest",
-		"99a3f49cc67b91477cf49ff15c42af0e",
+		"",
 	}
 )
 
@@ -174,7 +174,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileOpenResponse",
-		"99a3f49cc67b91477cf49ff15c42af0e",
+		"",
 	}
 )
 

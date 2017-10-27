@@ -93,7 +93,7 @@ var (
 string dir_path
 `,
 		"mavros_msgs/FileListRequest",
-		"1647c627907cac72fa2d06e0e5f96aac",
+		"",
 	}
 )
 
@@ -152,7 +152,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileListResponse",
-		"1647c627907cac72fa2d06e0e5f96aac",
+		"",
 	}
 )
 

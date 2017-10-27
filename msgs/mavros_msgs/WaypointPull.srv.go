@@ -86,7 +86,7 @@ var (
 
 `,
 		"mavros_msgs/WaypointPullRequest",
-		"a8d9ecef8fb37028d2db2a9aa4ed7e79",
+		"",
 	}
 )
 
@@ -134,7 +134,7 @@ bool success
 uint32 wp_received
 `,
 		"mavros_msgs/WaypointPullResponse",
-		"a8d9ecef8fb37028d2db2a9aa4ed7e79",
+		"",
 	}
 )
 

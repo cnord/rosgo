@@ -75,7 +75,7 @@ var (
 	MsgEmptyRequest = &_MsgEmptyRequest{
 		``,
 		"std_srvs/EmptyRequest",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"",
 	}
 )
 
@@ -120,7 +120,7 @@ var (
 	MsgEmptyResponse = &_MsgEmptyResponse{
 		``,
 		"std_srvs/EmptyResponse",
-		"d41d8cd98f00b204e9800998ecf8427e",
+		"",
 	}
 )
 

@@ -92,7 +92,7 @@ string old_path
 string new_path
 `,
 		"mavros_msgs/FileRenameRequest",
-		"07d853e3d48c88a648998515aab1f5b7",
+		"",
 	}
 )
 
@@ -160,7 +160,7 @@ bool success
 int32 r_errno
 `,
 		"mavros_msgs/FileRenameResponse",
-		"07d853e3d48c88a648998515aab1f5b7",
+		"",
 	}
 )
 

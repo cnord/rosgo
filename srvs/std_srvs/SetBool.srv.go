@@ -80,7 +80,7 @@ var (
 		`bool data # e.g. for hardware enabling / disabling
 `,
 		"std_srvs/SetBoolRequest",
-		"09fb03525b03e7ea1fd3992bafd87e16",
+		"",
 	}
 )
 
@@ -138,7 +138,7 @@ bool success   # indicate successful run of triggered service
 string message # informational, e.g. for error messages
 `,
 		"std_srvs/SetBoolResponse",
-		"09fb03525b03e7ea1fd3992bafd87e16",
+		"",
 	}
 )
 
