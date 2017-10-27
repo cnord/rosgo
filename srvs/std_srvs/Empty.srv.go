@@ -6,7 +6,7 @@ package std_srvs
 import (
 	"io"
 
-	"github.com/ppg/rosgo/ros"
+	"github.com/cnord/rosgo/ros"
 )
 
 // Service type metadata
