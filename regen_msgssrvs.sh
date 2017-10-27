@@ -27,25 +27,29 @@ msgs_dirs='
 	visualization_msgs
 '
 
-# Regenerate only choosen messages
+normalize_msgdir() {
+	basename "$1" | awk -F: 'BEGIN{deftype="msg"} $1~/_srvs/{deftype="srv"} $2~/^$/{$2=deftype} {print $1 ":" $2}'
+}
+
+# Regenerate only choosen message's packs
 if [[ "$@" != "" ]]; then
 	declare "_msgs_dirs=$(for p in $@; do
-		dir="$(dirname $(realpath $p))"
-		ptype="$(echo "$(basename $p)" | awk -F: 'BEGIN{deftype="msg"} $1~/_srvs/{deftype="srv"} {if ($2=="") {print deftype} else {print $2}}')"
-		name="$(echo "$(basename $p)"  | awk -F: '{print $1}')"
-		[ -z "$name" ] && continue
-		# there is no checking of exists folder due to it could be a first time call
-		echo "$name:$ptype"
+		[ -z "$(normalize_msgdir "$p" | awk -F: '{print $1}')" ] && continue
+		echo "$p"
 	done)"
 	if [ -n "$_msgs_dirs" ]; then
 		msgs_dirs="$_msgs_dirs"
+	else
+		echo "The directory list is empty or you set incorrect directory's names" >&2
+		exit 1
 	fi
 fi
 
 for dir in $msgs_dirs; do
-  declare "$(echo "$dir" | awk -F: '{printf "MSGDIR=%s", $1; }')"
-  declare "$(echo "$dir" | sed "s/^.*_//" | awk -F: '{printf "MSGDIRBASE=%s", $1; }')"
-  declare "$(echo "$dir" | awk -F: '{msgtype=$2; if ($2=="") { msgtype="msg" }; printf "MSGTYPE=%s", msgtype; }')"
+  dir="$(normalize_msgdir "$dir")"
+  declare "$(echo "$dir"    | awk -F: '{printf "MSGDIR=%s",     $1}')"
+  declare "$(echo "$MSGDIR" | awk -F_ '{printf "MSGDIRBASE=%s", $NF}')"
+  declare "$(echo "$dir"    | awk -F: '{printf "MSGTYPE=%s",    $2}')"
   echo "package $MSGDIR ..."
   mkdir -p $base_dir/${MSGTYPE}s/${MSGDIR}
   [ -d $share_dir/${MSGDIR}/$MSGTYPE/ ] || continue
