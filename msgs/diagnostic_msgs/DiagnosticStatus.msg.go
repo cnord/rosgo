@@ -11,6 +11,13 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	OK    byte = 0
+	WARN  byte = 1
+	ERROR byte = 2
+	STALE byte = 3
+)
+
 type _MsgDiagnosticStatus struct {
 	text   string
 	name   string

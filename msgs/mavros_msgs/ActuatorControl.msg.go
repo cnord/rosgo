@@ -12,6 +12,13 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	PX4_MIX_FLIGHT_CONTROL          uint8 = 0
+	PX4_MIX_FLIGHT_CONTROL_VTOL_ALT uint8 = 1
+	PX4_MIX_PAYLOAD                 uint8 = 2
+	PX4_MIX_MANUAL_PASSTHROUGH      uint8 = 3
+)
+
 type _MsgActuatorControl struct {
 	text   string
 	name   string

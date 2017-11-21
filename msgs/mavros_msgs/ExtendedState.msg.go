@@ -10,6 +10,19 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	VTOL_STATE_UNDEFINED        uint8 = 0
+	VTOL_STATE_TRANSITION_TO_FW uint8 = 1
+	VTOL_STATE_TRANSITION_TO_MC uint8 = 2
+	VTOL_STATE_MC               uint8 = 3
+	VTOL_STATE_FW               uint8 = 4
+	LANDED_STATE_UNDEFINED      uint8 = 0
+	LANDED_STATE_ON_GROUND      uint8 = 1
+	LANDED_STATE_IN_AIR         uint8 = 2
+	LANDED_STATE_TAKEOFF        uint8 = 3
+	LANDED_STATE_LANDING        uint8 = 4
+)
+
 type _MsgExtendedState struct {
 	text   string
 	name   string

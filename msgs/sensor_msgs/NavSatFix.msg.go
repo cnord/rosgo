@@ -12,6 +12,13 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	COVARIANCE_TYPE_UNKNOWN        uint8 = 0
+	COVARIANCE_TYPE_APPROXIMATED   uint8 = 1
+	COVARIANCE_TYPE_DIAGONAL_KNOWN uint8 = 2
+	COVARIANCE_TYPE_KNOWN          uint8 = 3
+)
+
 type _MsgNavSatFix struct {
 	text   string
 	name   string

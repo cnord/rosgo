@@ -55,7 +55,6 @@ for dir in $msgs_dirs; do
   [ -d $share_dir/${MSGDIR}/$MSGTYPE/ ] || continue
   for file in $(find $share_dir/${MSGDIR}/$MSGTYPE/ -mindepth 1 -maxdepth 1 -name "*.${MSGTYPE}"); do
     target=$base_dir/${MSGDIRBASE}/${MSGDIR}/${file##*/}
-    cp $file $target
-    ros-gen-go $MSGTYPE --package=${MSGDIR} --in=$file --out=$target.go
-	done
+    ros-gen-go $MSGTYPE --make-copy --package=${MSGDIR} --in=$file --out=$target.go
+  done
 done

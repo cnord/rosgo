@@ -11,6 +11,15 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	KEEP_ALIVE   uint8 = 0
+	POSE_UPDATE  uint8 = 1
+	MENU_SELECT  uint8 = 2
+	BUTTON_CLICK uint8 = 3
+	MOUSE_DOWN   uint8 = 4
+	MOUSE_UP     uint8 = 5
+)
+
 type _MsgInteractiveMarkerFeedback struct {
 	text   string
 	name   string

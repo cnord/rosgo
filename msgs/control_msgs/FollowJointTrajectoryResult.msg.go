@@ -9,6 +9,10 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	SUCCESSFUL int32 = 0
+)
+
 type _MsgFollowJointTrajectoryResult struct {
 	text   string
 	name   string

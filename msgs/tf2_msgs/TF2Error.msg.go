@@ -9,6 +9,16 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	NO_ERROR               uint8 = 0
+	LOOKUP_ERROR           uint8 = 1
+	CONNECTIVITY_ERROR     uint8 = 2
+	EXTRAPOLATION_ERROR    uint8 = 3
+	INVALID_ARGUMENT_ERROR uint8 = 4
+	TIMEOUT_ERROR          uint8 = 5
+	TRANSFORM_ERROR        uint8 = 6
+)
+
 type _MsgTF2Error struct {
 	text   string
 	name   string

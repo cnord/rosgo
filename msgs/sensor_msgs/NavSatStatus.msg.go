@@ -9,6 +9,16 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	STATUS_FIX      int8   = 0
+	STATUS_SBAS_FIX int8   = 1
+	STATUS_GBAS_FIX int8   = 2
+	SERVICE_GPS     uint16 = 1
+	SERVICE_GLONASS uint16 = 2
+	SERVICE_COMPASS uint16 = 4
+	SERVICE_GALILEO uint16 = 8
+)
+
 type _MsgNavSatStatus struct {
 	text   string
 	name   string

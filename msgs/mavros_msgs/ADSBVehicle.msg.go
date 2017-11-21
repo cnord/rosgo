@@ -10,6 +10,38 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ALT_PRESSURE_QNH          uint8  = 0
+	ALT_GEOMETRIC             uint8  = 1
+	EMITTER_NO_INFO           uint8  = 0
+	EMITTER_LIGHT             uint8  = 1
+	EMITTER_SMALL             uint8  = 2
+	EMITTER_LARGE             uint8  = 3
+	EMITTER_HIGH_VORTEX_LARGE uint8  = 4
+	EMITTER_HEAVY             uint8  = 5
+	EMITTER_HIGHLY_MANUV      uint8  = 6
+	EMITTER_ROTOCRAFT         uint8  = 7
+	EMITTER_UNASSIGNED        uint8  = 8
+	EMITTER_GLIDER            uint8  = 9
+	EMITTER_LIGHTER_AIR       uint8  = 10
+	EMITTER_PARACHUTE         uint8  = 11
+	EMITTER_ULTRA_LIGHT       uint8  = 12
+	EMITTER_UNASSIGNED2       uint8  = 13
+	EMITTER_UAV               uint8  = 14
+	EMITTER_SPACE             uint8  = 15
+	EMITTER_UNASSGINED3       uint8  = 16
+	EMITTER_EMERGENCY_SURFACE uint8  = 17
+	EMITTER_SERVICE_SURFACE   uint8  = 18
+	EMITTER_POINT_OBSTACLE    uint8  = 19
+	FLAG_VALID_COORDS         uint16 = 1
+	FLAG_VALID_ALTITUDE       uint16 = 2
+	FLAG_VALID_HEADING        uint16 = 4
+	FLAG_VALID_VELOCITY       uint16 = 8
+	FLAG_VALID_CALLSIGN       uint16 = 16
+	FLAG_VALID_SQUAWK         uint16 = 32
+	FLAG_SIMULATED            uint16 = 64
+)
+
 type _MsgADSBVehicle struct {
 	text   string
 	name   string

@@ -12,6 +12,14 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	FRAMING_OK            uint8 = 1
+	FRAMING_BAD_CRC       uint8 = 2
+	FRAMING_BAD_SIGNATURE uint8 = 3
+	MAVLINK_V10           uint8 = 254
+	MAVLINK_V20           uint8 = 253
+)
+
 type _MsgMavlink struct {
 	text   string
 	name   string

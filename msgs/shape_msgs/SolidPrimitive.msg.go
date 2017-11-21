@@ -11,6 +11,21 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	BOX             uint8 = 1
+	SPHERE          uint8 = 2
+	CYLINDER        uint8 = 3
+	CONE            uint8 = 4
+	BOX_X           uint8 = 0
+	BOX_Y           uint8 = 1
+	BOX_Z           uint8 = 2
+	SPHERE_RADIUS   uint8 = 0
+	CYLINDER_HEIGHT uint8 = 0
+	CYLINDER_RADIUS uint8 = 1
+	CONE_HEIGHT     uint8 = 0
+	CONE_RADIUS     uint8 = 1
+)
+
 type _MsgSolidPrimitive struct {
 	text   string
 	name   string

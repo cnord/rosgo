@@ -11,6 +11,24 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	FRAME_GLOBAL_INT         uint8  = 5
+	FRAME_GLOBAL_REL_ALT     uint8  = 6
+	FRAME_GLOBAL_TERRAIN_ALT uint8  = 11
+	IGNORE_LATITUDE          uint16 = 1
+	IGNORE_LONGITUDE         uint16 = 2
+	IGNORE_ALTITUDE          uint16 = 4
+	IGNORE_VX                uint16 = 8
+	IGNORE_VY                uint16 = 16
+	IGNORE_VZ                uint16 = 32
+	IGNORE_AFX               uint16 = 64
+	IGNORE_AFY               uint16 = 128
+	IGNORE_AFZ               uint16 = 256
+	FORCE                    uint16 = 512
+	IGNORE_YAW               uint16 = 1024
+	IGNORE_YAW_RATE          uint16 = 2048
+)
+
 type _MsgGlobalPositionTarget struct {
 	text   string
 	name   string

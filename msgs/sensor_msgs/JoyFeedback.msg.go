@@ -9,6 +9,12 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	TYPE_LED    uint8 = 0
+	TYPE_RUMBLE uint8 = 1
+	TYPE_BUZZER uint8 = 2
+)
+
 type _MsgJoyFeedback struct {
 	text   string
 	name   string

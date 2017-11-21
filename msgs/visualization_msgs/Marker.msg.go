@@ -13,6 +13,25 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ARROW            uint8 = 0
+	CUBE             uint8 = 1
+	SPHERE           uint8 = 2
+	CYLINDER         uint8 = 3
+	LINE_STRIP       uint8 = 4
+	LINE_LIST        uint8 = 5
+	CUBE_LIST        uint8 = 6
+	SPHERE_LIST      uint8 = 7
+	POINTS           uint8 = 8
+	TEXT_VIEW_FACING uint8 = 9
+	MESH_RESOURCE    uint8 = 10
+	TRIANGLE_LIST    uint8 = 11
+	ADD              uint8 = 0
+	MODIFY           uint8 = 0
+	DELETE           uint8 = 2
+	DELETEALL        uint8 = 3
+)
+
 type _MsgMarker struct {
 	text   string
 	name   string

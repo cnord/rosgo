@@ -11,6 +11,11 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ADD    uint32 = 0
+	DELETE uint32 = 1
+)
+
 type _MsgPointCloud2Update struct {
 	text   string
 	name   string

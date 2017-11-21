@@ -12,6 +12,14 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	DEBUG byte = 1
+	INFO  byte = 2
+	WARN  byte = 4
+	ERROR byte = 8
+	FATAL byte = 16
+)
+
 type _MsgLog struct {
 	text   string
 	name   string

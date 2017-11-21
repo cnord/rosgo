@@ -9,6 +9,12 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	FEEDBACK  uint8 = 0
+	ROSRUN    uint8 = 1
+	ROSLAUNCH uint8 = 2
+)
+
 type _MsgMenuEntry struct {
 	text   string
 	name   string

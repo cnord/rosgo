@@ -11,6 +11,14 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	IGNORE_ROLL_RATE  uint8 = 1
+	IGNORE_PITCH_RATE uint8 = 2
+	IGNORE_YAW_RATE   uint8 = 4
+	IGNORE_THRUST     uint8 = 64
+	IGNORE_ATTITUDE   uint8 = 128
+)
+
 type _MsgAttitudeTarget struct {
 	text   string
 	name   string

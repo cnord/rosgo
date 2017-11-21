@@ -1,3 +1,11 @@
+{{ if .Constants }}
+const (
+	{{- range .Constants }}
+	{{ .Name }} {{ .TypeName }} = {{ .Value }}
+	{{- end }}
+)
+{{ end }}
+
 type _Msg{{ .Name }} struct {
 	text string
 	name string

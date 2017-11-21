@@ -10,6 +10,11 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ULTRASOUND uint8 = 0
+	INFRARED   uint8 = 1
+)
+
 type _MsgRange struct {
 	text   string
 	name   string

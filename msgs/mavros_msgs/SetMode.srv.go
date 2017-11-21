@@ -69,6 +69,20 @@ func (s *SetMode) ResMessage() ros.Message { return &s.Response }
 
 // SetModeRequest
 
+const (
+	MAV_MODE_PREFLIGHT          uint8 = 0
+	MAV_MODE_STABILIZE_DISARMED uint8 = 80
+	MAV_MODE_STABILIZE_ARMED    uint8 = 208
+	MAV_MODE_MANUAL_DISARMED    uint8 = 64
+	MAV_MODE_MANUAL_ARMED       uint8 = 192
+	MAV_MODE_GUIDED_DISARMED    uint8 = 88
+	MAV_MODE_GUIDED_ARMED       uint8 = 216
+	MAV_MODE_AUTO_DISARMED      uint8 = 92
+	MAV_MODE_AUTO_ARMED         uint8 = 220
+	MAV_MODE_TEST_DISARMED      uint8 = 66
+	MAV_MODE_TEST_ARMED         uint8 = 194
+)
+
 type _MsgSetModeRequest struct {
 	text   string
 	name   string

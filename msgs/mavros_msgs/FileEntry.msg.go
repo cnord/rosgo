@@ -9,6 +9,11 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	TYPE_FILE      uint8 = 0
+	TYPE_DIRECTORY uint8 = 1
+)
+
 type _MsgFileEntry struct {
 	text   string
 	name   string

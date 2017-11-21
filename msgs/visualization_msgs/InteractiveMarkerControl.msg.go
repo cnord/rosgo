@@ -12,6 +12,22 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	INHERIT        uint8 = 0
+	FIXED          uint8 = 1
+	VIEW_FACING    uint8 = 2
+	NONE           uint8 = 0
+	MENU           uint8 = 1
+	BUTTON         uint8 = 2
+	MOVE_AXIS      uint8 = 3
+	MOVE_PLANE     uint8 = 4
+	ROTATE_AXIS    uint8 = 5
+	MOVE_ROTATE    uint8 = 6
+	MOVE_3D        uint8 = 7
+	ROTATE_3D      uint8 = 8
+	MOVE_ROTATE_3D uint8 = 9
+)
+
 type _MsgInteractiveMarkerControl struct {
 	text   string
 	name   string

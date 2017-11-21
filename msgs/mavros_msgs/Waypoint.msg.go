@@ -9,6 +9,14 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	FRAME_GLOBAL         uint8 = 0
+	FRAME_LOCAL_NED      uint8 = 1
+	FRAME_MISSION        uint8 = 2
+	FRAME_GLOBAL_REL_ALT uint8 = 3
+	FRAME_LOCAL_ENU      uint8 = 4
+)
+
 type _MsgWaypoint struct {
 	text   string
 	name   string

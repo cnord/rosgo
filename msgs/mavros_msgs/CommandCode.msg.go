@@ -9,6 +9,39 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	CMD_DO_SET_MODE                    uint16 = 176
+	CMD_DO_JUMP                        uint16 = 177
+	CMD_DO_CHANGE_SPEED                uint16 = 178
+	CMD_DO_SET_HOME                    uint16 = 179
+	CMD_DO_SET_RELAY                   uint16 = 181
+	CMD_DO_REPEAT_RELAY                uint16 = 182
+	CMD_DO_SET_SERVO                   uint16 = 183
+	CMD_DO_REPEAT_SERVO                uint16 = 184
+	CMD_DO_CONTROL_VIDEO               uint16 = 200
+	CMD_DO_SET_ROI                     uint16 = 201
+	CMD_DO_MOUNT_CONTROL               uint16 = 205
+	CMD_DO_SET_CAM_TRIGG_DIST          uint16 = 206
+	CMD_DO_FENCE_ENABLE                uint16 = 207
+	CMD_DO_PARACHUTE                   uint16 = 208
+	CMD_DO_INVERTED_FLIGHT             uint16 = 210
+	CMD_DO_MOUNT_CONTROL_QUAT          uint16 = 220
+	CMD_PREFLIGHT_CALIBRATION          uint16 = 241
+	CMD_MISSION_START                  uint16 = 300
+	CMD_COMPONENT_ARM_DISARM           uint16 = 400
+	CMD_GET_HOME_POSITION              uint16 = 410
+	CMD_START_RX_PAIR                  uint16 = 500
+	CMD_REQUEST_AUTOPILOT_CAPABILITIES uint16 = 520
+	CMD_DO_TRIGGER_CONTROL             uint16 = 2003
+	NAV_WAYPOINT                       uint16 = 16
+	NAV_LOITER_UNLIM                   uint16 = 17
+	NAV_LOITER_TURNS                   uint16 = 18
+	NAV_LOITER_TIME                    uint16 = 19
+	NAV_RETURN_TO_LAUNCH               uint16 = 20
+	NAV_LAND                           uint16 = 21
+	NAV_TAKEOFF                        uint16 = 22
+)
+
 type _MsgCommandCode struct {
 	text   string
 	name   string
