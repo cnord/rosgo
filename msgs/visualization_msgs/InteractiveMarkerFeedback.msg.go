@@ -12,12 +12,12 @@ import (
 )
 
 const (
-	KEEP_ALIVE   uint8 = 0
-	POSE_UPDATE  uint8 = 1
-	MENU_SELECT  uint8 = 2
-	BUTTON_CLICK uint8 = 3
-	MOUSE_DOWN   uint8 = 4
-	MOUSE_UP     uint8 = 5
+	InteractiveMarkerFeedback_KEEP_ALIVE   uint8 = 0
+	InteractiveMarkerFeedback_POSE_UPDATE  uint8 = 1
+	InteractiveMarkerFeedback_MENU_SELECT  uint8 = 2
+	InteractiveMarkerFeedback_BUTTON_CLICK uint8 = 3
+	InteractiveMarkerFeedback_MOUSE_DOWN   uint8 = 4
+	InteractiveMarkerFeedback_MOUSE_UP     uint8 = 5
 )
 
 type _MsgInteractiveMarkerFeedback struct {

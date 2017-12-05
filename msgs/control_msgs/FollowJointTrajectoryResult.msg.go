@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	SUCCESSFUL int32 = 0
+	FollowJointTrajectoryResult_SUCCESSFUL int32 = 0
 )
 
 type _MsgFollowJointTrajectoryResult struct {

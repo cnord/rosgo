@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	ADD    uint32 = 0
-	DELETE uint32 = 1
+	PointCloud2Update_ADD    uint32 = 0
+	PointCloud2Update_DELETE uint32 = 1
 )
 
 type _MsgPointCloud2Update struct {

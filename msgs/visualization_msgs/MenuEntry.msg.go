@@ -10,9 +10,9 @@ import (
 )
 
 const (
-	FEEDBACK  uint8 = 0
-	ROSRUN    uint8 = 1
-	ROSLAUNCH uint8 = 2
+	MenuEntry_FEEDBACK  uint8 = 0
+	MenuEntry_ROSRUN    uint8 = 1
+	MenuEntry_ROSLAUNCH uint8 = 2
 )
 
 type _MsgMenuEntry struct {

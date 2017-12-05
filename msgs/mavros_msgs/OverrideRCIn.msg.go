@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	CHAN_RELEASE  uint16 = 0
-	CHAN_NOCHANGE uint16 = 65535
+	OverrideRCIn_CHAN_RELEASE  uint16 = 0
+	OverrideRCIn_CHAN_NOCHANGE uint16 = 65535
 )
 
 type _MsgOverrideRCIn struct {

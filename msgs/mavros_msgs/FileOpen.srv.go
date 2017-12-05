@@ -65,9 +65,9 @@ func (s *FileOpen) ResMessage() ros.Message { return &s.Response }
 // FileOpenRequest
 
 const (
-	MODE_READ   uint8 = 0
-	MODE_WRITE  uint8 = 1
-	MODE_CREATE uint8 = 2
+	FileOpenRequest_MODE_READ   uint8 = 0
+	FileOpenRequest_MODE_WRITE  uint8 = 1
+	FileOpenRequest_MODE_CREATE uint8 = 2
 )
 
 type _MsgFileOpenRequest struct {

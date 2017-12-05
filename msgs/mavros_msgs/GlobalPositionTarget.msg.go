@@ -12,21 +12,21 @@ import (
 )
 
 const (
-	FRAME_GLOBAL_INT         uint8  = 5
-	FRAME_GLOBAL_REL_ALT     uint8  = 6
-	FRAME_GLOBAL_TERRAIN_ALT uint8  = 11
-	IGNORE_LATITUDE          uint16 = 1
-	IGNORE_LONGITUDE         uint16 = 2
-	IGNORE_ALTITUDE          uint16 = 4
-	IGNORE_VX                uint16 = 8
-	IGNORE_VY                uint16 = 16
-	IGNORE_VZ                uint16 = 32
-	IGNORE_AFX               uint16 = 64
-	IGNORE_AFY               uint16 = 128
-	IGNORE_AFZ               uint16 = 256
-	FORCE                    uint16 = 512
-	IGNORE_YAW               uint16 = 1024
-	IGNORE_YAW_RATE          uint16 = 2048
+	GlobalPositionTarget_FRAME_GLOBAL_INT         uint8  = 5
+	GlobalPositionTarget_FRAME_GLOBAL_REL_ALT     uint8  = 6
+	GlobalPositionTarget_FRAME_GLOBAL_TERRAIN_ALT uint8  = 11
+	GlobalPositionTarget_IGNORE_LATITUDE          uint16 = 1
+	GlobalPositionTarget_IGNORE_LONGITUDE         uint16 = 2
+	GlobalPositionTarget_IGNORE_ALTITUDE          uint16 = 4
+	GlobalPositionTarget_IGNORE_VX                uint16 = 8
+	GlobalPositionTarget_IGNORE_VY                uint16 = 16
+	GlobalPositionTarget_IGNORE_VZ                uint16 = 32
+	GlobalPositionTarget_IGNORE_AFX               uint16 = 64
+	GlobalPositionTarget_IGNORE_AFY               uint16 = 128
+	GlobalPositionTarget_IGNORE_AFZ               uint16 = 256
+	GlobalPositionTarget_FORCE                    uint16 = 512
+	GlobalPositionTarget_IGNORE_YAW               uint16 = 1024
+	GlobalPositionTarget_IGNORE_YAW_RATE          uint16 = 2048
 )
 
 type _MsgGlobalPositionTarget struct {

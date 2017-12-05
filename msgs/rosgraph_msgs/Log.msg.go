@@ -13,11 +13,11 @@ import (
 )
 
 const (
-	DEBUG byte = 1
-	INFO  byte = 2
-	WARN  byte = 4
-	ERROR byte = 8
-	FATAL byte = 16
+	Log_DEBUG byte = 1
+	Log_INFO  byte = 2
+	Log_WARN  byte = 4
+	Log_ERROR byte = 8
+	Log_FATAL byte = 16
 )
 
 type _MsgLog struct {

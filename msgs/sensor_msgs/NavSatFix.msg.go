@@ -13,10 +13,10 @@ import (
 )
 
 const (
-	COVARIANCE_TYPE_UNKNOWN        uint8 = 0
-	COVARIANCE_TYPE_APPROXIMATED   uint8 = 1
-	COVARIANCE_TYPE_DIAGONAL_KNOWN uint8 = 2
-	COVARIANCE_TYPE_KNOWN          uint8 = 3
+	NavSatFix_COVARIANCE_TYPE_UNKNOWN        uint8 = 0
+	NavSatFix_COVARIANCE_TYPE_APPROXIMATED   uint8 = 1
+	NavSatFix_COVARIANCE_TYPE_DIAGONAL_KNOWN uint8 = 2
+	NavSatFix_COVARIANCE_TYPE_KNOWN          uint8 = 3
 )
 
 type _MsgNavSatFix struct {

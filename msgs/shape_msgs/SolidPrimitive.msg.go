@@ -12,18 +12,18 @@ import (
 )
 
 const (
-	BOX             uint8 = 1
-	SPHERE          uint8 = 2
-	CYLINDER        uint8 = 3
-	CONE            uint8 = 4
-	BOX_X           uint8 = 0
-	BOX_Y           uint8 = 1
-	BOX_Z           uint8 = 2
-	SPHERE_RADIUS   uint8 = 0
-	CYLINDER_HEIGHT uint8 = 0
-	CYLINDER_RADIUS uint8 = 1
-	CONE_HEIGHT     uint8 = 0
-	CONE_RADIUS     uint8 = 1
+	SolidPrimitive_BOX             uint8 = 1
+	SolidPrimitive_SPHERE          uint8 = 2
+	SolidPrimitive_CYLINDER        uint8 = 3
+	SolidPrimitive_CONE            uint8 = 4
+	SolidPrimitive_BOX_X           uint8 = 0
+	SolidPrimitive_BOX_Y           uint8 = 1
+	SolidPrimitive_BOX_Z           uint8 = 2
+	SolidPrimitive_SPHERE_RADIUS   uint8 = 0
+	SolidPrimitive_CYLINDER_HEIGHT uint8 = 0
+	SolidPrimitive_CYLINDER_RADIUS uint8 = 1
+	SolidPrimitive_CONE_HEIGHT     uint8 = 0
+	SolidPrimitive_CONE_RADIUS     uint8 = 1
 )
 
 type _MsgSolidPrimitive struct {

@@ -13,19 +13,19 @@ import (
 )
 
 const (
-	INHERIT        uint8 = 0
-	FIXED          uint8 = 1
-	VIEW_FACING    uint8 = 2
-	NONE           uint8 = 0
-	MENU           uint8 = 1
-	BUTTON         uint8 = 2
-	MOVE_AXIS      uint8 = 3
-	MOVE_PLANE     uint8 = 4
-	ROTATE_AXIS    uint8 = 5
-	MOVE_ROTATE    uint8 = 6
-	MOVE_3D        uint8 = 7
-	ROTATE_3D      uint8 = 8
-	MOVE_ROTATE_3D uint8 = 9
+	InteractiveMarkerControl_INHERIT        uint8 = 0
+	InteractiveMarkerControl_FIXED          uint8 = 1
+	InteractiveMarkerControl_VIEW_FACING    uint8 = 2
+	InteractiveMarkerControl_NONE           uint8 = 0
+	InteractiveMarkerControl_MENU           uint8 = 1
+	InteractiveMarkerControl_BUTTON         uint8 = 2
+	InteractiveMarkerControl_MOVE_AXIS      uint8 = 3
+	InteractiveMarkerControl_MOVE_PLANE     uint8 = 4
+	InteractiveMarkerControl_ROTATE_AXIS    uint8 = 5
+	InteractiveMarkerControl_MOVE_ROTATE    uint8 = 6
+	InteractiveMarkerControl_MOVE_3D        uint8 = 7
+	InteractiveMarkerControl_ROTATE_3D      uint8 = 8
+	InteractiveMarkerControl_MOVE_ROTATE_3D uint8 = 9
 )
 
 type _MsgInteractiveMarkerControl struct {

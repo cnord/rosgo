@@ -12,10 +12,10 @@ import (
 )
 
 const (
-	OK    byte = 0
-	WARN  byte = 1
-	ERROR byte = 2
-	STALE byte = 3
+	DiagnosticStatus_OK    byte = 0
+	DiagnosticStatus_WARN  byte = 1
+	DiagnosticStatus_ERROR byte = 2
+	DiagnosticStatus_STALE byte = 3
 )
 
 type _MsgDiagnosticStatus struct {

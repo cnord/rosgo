@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	KEEP_ALIVE uint8 = 0
-	UPDATE     uint8 = 1
+	InteractiveMarkerUpdate_KEEP_ALIVE uint8 = 0
+	InteractiveMarkerUpdate_UPDATE     uint8 = 1
 )
 
 type _MsgInteractiveMarkerUpdate struct {

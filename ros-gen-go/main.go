@@ -274,7 +274,7 @@ func parseMsgSpec(packageName, name string, data []byte) (*MsgSpec, error) {
 			rosName := items[2]
 			rosType := items[1]
 			rosValue := items[3]
-			constant := newMsgConstant(rosName, rosType, rosValue)
+			constant := newMsgConstant(spec.Name, rosName, rosType, rosValue)
 			//log.Printf("constant: %+v", constant)
 			spec.Constants = append(spec.Constants, constant)
 			continue
@@ -423,9 +423,9 @@ type msgConstant struct {
 	Value    string
 }
 
-func newMsgConstant(rosName, rosType, value string) (constant *msgConstant) {
+func newMsgConstant(prefix, rosName, rosType, value string) (constant *msgConstant) {
 	constant = new(msgConstant)
-	constant.Name = strings.ToUpper(rosName)
+	constant.Name = prefix + "_" + strings.ToUpper(rosName)
 	constant.TypeName = rosType
 	constant.Value = value
 	return

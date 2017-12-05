@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	ULTRASOUND uint8 = 0
-	INFRARED   uint8 = 1
+	Range_ULTRASOUND uint8 = 0
+	Range_INFRARED   uint8 = 1
 )
 
 type _MsgRange struct {

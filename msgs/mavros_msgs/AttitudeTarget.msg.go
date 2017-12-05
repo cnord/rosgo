@@ -12,11 +12,11 @@ import (
 )
 
 const (
-	IGNORE_ROLL_RATE  uint8 = 1
-	IGNORE_PITCH_RATE uint8 = 2
-	IGNORE_YAW_RATE   uint8 = 4
-	IGNORE_THRUST     uint8 = 64
-	IGNORE_ATTITUDE   uint8 = 128
+	AttitudeTarget_IGNORE_ROLL_RATE  uint8 = 1
+	AttitudeTarget_IGNORE_PITCH_RATE uint8 = 2
+	AttitudeTarget_IGNORE_YAW_RATE   uint8 = 4
+	AttitudeTarget_IGNORE_THRUST     uint8 = 64
+	AttitudeTarget_IGNORE_ATTITUDE   uint8 = 128
 )
 
 type _MsgAttitudeTarget struct {

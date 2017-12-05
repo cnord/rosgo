@@ -65,15 +65,15 @@ func (s *StreamRate) ResMessage() ros.Message { return &s.Response }
 // StreamRateRequest
 
 const (
-	STREAM_ALL             uint8 = 0
-	STREAM_RAW_SENSORS     uint8 = 1
-	STREAM_EXTENDED_STATUS uint8 = 2
-	STREAM_RC_CHANNELS     uint8 = 3
-	STREAM_RAW_CONTROLLER  uint8 = 4
-	STREAM_POSITION        uint8 = 6
-	STREAM_EXTRA1          uint8 = 10
-	STREAM_EXTRA2          uint8 = 11
-	STREAM_EXTRA3          uint8 = 12
+	StreamRateRequest_STREAM_ALL             uint8 = 0
+	StreamRateRequest_STREAM_RAW_SENSORS     uint8 = 1
+	StreamRateRequest_STREAM_EXTENDED_STATUS uint8 = 2
+	StreamRateRequest_STREAM_RC_CHANNELS     uint8 = 3
+	StreamRateRequest_STREAM_RAW_CONTROLLER  uint8 = 4
+	StreamRateRequest_STREAM_POSITION        uint8 = 6
+	StreamRateRequest_STREAM_EXTRA1          uint8 = 10
+	StreamRateRequest_STREAM_EXTRA2          uint8 = 11
+	StreamRateRequest_STREAM_EXTRA3          uint8 = 12
 )
 
 type _MsgStreamRateRequest struct {
