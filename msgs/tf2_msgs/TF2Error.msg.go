@@ -9,6 +9,16 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	TF2Error_NO_ERROR               uint8 = 0
+	TF2Error_LOOKUP_ERROR           uint8 = 1
+	TF2Error_CONNECTIVITY_ERROR     uint8 = 2
+	TF2Error_EXTRAPOLATION_ERROR    uint8 = 3
+	TF2Error_INVALID_ARGUMENT_ERROR uint8 = 4
+	TF2Error_TIMEOUT_ERROR          uint8 = 5
+	TF2Error_TRANSFORM_ERROR        uint8 = 6
+)
+
 type _MsgTF2Error struct {
 	text   string
 	name   string

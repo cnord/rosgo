@@ -12,6 +12,30 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	BatteryState_POWER_SUPPLY_STATUS_UNKNOWN               uint8 = 0
+	BatteryState_POWER_SUPPLY_STATUS_CHARGING              uint8 = 1
+	BatteryState_POWER_SUPPLY_STATUS_DISCHARGING           uint8 = 2
+	BatteryState_POWER_SUPPLY_STATUS_NOT_CHARGING          uint8 = 3
+	BatteryState_POWER_SUPPLY_STATUS_FULL                  uint8 = 4
+	BatteryState_POWER_SUPPLY_HEALTH_UNKNOWN               uint8 = 0
+	BatteryState_POWER_SUPPLY_HEALTH_GOOD                  uint8 = 1
+	BatteryState_POWER_SUPPLY_HEALTH_OVERHEAT              uint8 = 2
+	BatteryState_POWER_SUPPLY_HEALTH_DEAD                  uint8 = 3
+	BatteryState_POWER_SUPPLY_HEALTH_OVERVOLTAGE           uint8 = 4
+	BatteryState_POWER_SUPPLY_HEALTH_UNSPEC_FAILURE        uint8 = 5
+	BatteryState_POWER_SUPPLY_HEALTH_COLD                  uint8 = 6
+	BatteryState_POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE uint8 = 7
+	BatteryState_POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE   uint8 = 8
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_UNKNOWN           uint8 = 0
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_NIMH              uint8 = 1
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_LION              uint8 = 2
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_LIPO              uint8 = 3
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_LIFE              uint8 = 4
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_NICD              uint8 = 5
+	BatteryState_POWER_SUPPLY_TECHNOLOGY_LIMN              uint8 = 6
+)
+
 type _MsgBatteryState struct {
 	text   string
 	name   string

@@ -9,6 +9,19 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	GoalStatus_PENDING    uint8 = 0
+	GoalStatus_ACTIVE     uint8 = 1
+	GoalStatus_PREEMPTED  uint8 = 2
+	GoalStatus_SUCCEEDED  uint8 = 3
+	GoalStatus_ABORTED    uint8 = 4
+	GoalStatus_REJECTED   uint8 = 5
+	GoalStatus_PREEMPTING uint8 = 6
+	GoalStatus_RECALLING  uint8 = 7
+	GoalStatus_RECALLED   uint8 = 8
+	GoalStatus_LOST       uint8 = 9
+)
+
 type _MsgGoalStatus struct {
 	text   string
 	name   string

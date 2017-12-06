@@ -10,6 +10,38 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ADSBVehicle_ALT_PRESSURE_QNH          uint8  = 0
+	ADSBVehicle_ALT_GEOMETRIC             uint8  = 1
+	ADSBVehicle_EMITTER_NO_INFO           uint8  = 0
+	ADSBVehicle_EMITTER_LIGHT             uint8  = 1
+	ADSBVehicle_EMITTER_SMALL             uint8  = 2
+	ADSBVehicle_EMITTER_LARGE             uint8  = 3
+	ADSBVehicle_EMITTER_HIGH_VORTEX_LARGE uint8  = 4
+	ADSBVehicle_EMITTER_HEAVY             uint8  = 5
+	ADSBVehicle_EMITTER_HIGHLY_MANUV      uint8  = 6
+	ADSBVehicle_EMITTER_ROTOCRAFT         uint8  = 7
+	ADSBVehicle_EMITTER_UNASSIGNED        uint8  = 8
+	ADSBVehicle_EMITTER_GLIDER            uint8  = 9
+	ADSBVehicle_EMITTER_LIGHTER_AIR       uint8  = 10
+	ADSBVehicle_EMITTER_PARACHUTE         uint8  = 11
+	ADSBVehicle_EMITTER_ULTRA_LIGHT       uint8  = 12
+	ADSBVehicle_EMITTER_UNASSIGNED2       uint8  = 13
+	ADSBVehicle_EMITTER_UAV               uint8  = 14
+	ADSBVehicle_EMITTER_SPACE             uint8  = 15
+	ADSBVehicle_EMITTER_UNASSGINED3       uint8  = 16
+	ADSBVehicle_EMITTER_EMERGENCY_SURFACE uint8  = 17
+	ADSBVehicle_EMITTER_SERVICE_SURFACE   uint8  = 18
+	ADSBVehicle_EMITTER_POINT_OBSTACLE    uint8  = 19
+	ADSBVehicle_FLAG_VALID_COORDS         uint16 = 1
+	ADSBVehicle_FLAG_VALID_ALTITUDE       uint16 = 2
+	ADSBVehicle_FLAG_VALID_HEADING        uint16 = 4
+	ADSBVehicle_FLAG_VALID_VELOCITY       uint16 = 8
+	ADSBVehicle_FLAG_VALID_CALLSIGN       uint16 = 16
+	ADSBVehicle_FLAG_VALID_SQUAWK         uint16 = 32
+	ADSBVehicle_FLAG_SIMULATED            uint16 = 64
+)
+
 type _MsgADSBVehicle struct {
 	text   string
 	name   string

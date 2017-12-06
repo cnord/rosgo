@@ -28,6 +28,7 @@ var (
 	infile      string
 	outfile     string
 	packageName string
+	copyRaw     bool
 	dryRun      bool
 )
 
@@ -43,6 +44,7 @@ func main() {
 	flag.StringVarP(&infile, "in", "i", "", "input file")
 	flag.StringVarP(&outfile, "out", "o", "", "output file; defaults to '<input file>.go'")
 	flag.StringVarP(&packageName, "package", "p", "", "package name for generated file; defaults to 'msgs' or 'srvs'")
+	flag.BoolVar(&copyRaw, "make-copy", false, "copy input file to the same directory as output file")
 	flag.BoolVar(&dryRun, "dry-run", false, "output the file that would be generated to stdout")
 	flag.Parse()
 
@@ -129,6 +131,10 @@ func main() {
 		if err != nil {
 			log.Fatalf("failed to parse %s spec: %s", templateType, err)
 		}
+		if msgSpec.MD5Sum == "" {
+			log.Printf("MD5sum of %s file %s is empty. Generation skipped.", templateType, infile)
+			return
+		}
 		spec = msgSpec
 
 	case "srv":
@@ -136,6 +142,10 @@ func main() {
 		srvSpec, err = parseSrvSpec(fileInfo.PackageName, fileInfo.Name, data)
 		if err != nil {
 			log.Fatalf("failed to parse %s spec: %s", templateType, err)
+		}
+		if srvSpec.MD5Sum == "" {
+			log.Fatalf("MD5sum of %s file %s is empty. Generation skipped.", templateType, infile)
+			return
 		}
 		spec = srvSpec
 
@@ -165,8 +175,13 @@ func main() {
 		return
 	}
 
-	err = ioutil.WriteFile(outfile, buf.Bytes(), 0644)
-	if err != nil {
+	if copyRaw {
+		incopy := filepath.Join(filepath.Dir(outfile), basename)
+		if err = ioutil.WriteFile(incopy, data, 0644); err != nil {
+			log.Fatalf("failed to write raw file: %s", err)
+		}
+	}
+	if err = ioutil.WriteFile(outfile, buf.Bytes(), 0644); err != nil {
 		log.Fatalf("failed to write go file: %s", err)
 	}
 	log.Printf("Wrote %s from %s", outfile, infile)
@@ -259,7 +274,7 @@ func parseMsgSpec(packageName, name string, data []byte) (*MsgSpec, error) {
 			rosName := items[2]
 			rosType := items[1]
 			rosValue := items[3]
-			constant := newMsgConstant(rosName, rosType, rosValue)
+			constant := newMsgConstant(spec.Name, rosName, rosType, rosValue)
 			//log.Printf("constant: %+v", constant)
 			spec.Constants = append(spec.Constants, constant)
 			continue
@@ -408,9 +423,9 @@ type msgConstant struct {
 	Value    string
 }
 
-func newMsgConstant(rosName, rosType, value string) (constant *msgConstant) {
+func newMsgConstant(prefix, rosName, rosType, value string) (constant *msgConstant) {
 	constant = new(msgConstant)
-	constant.Name = snakeToCamel(rosName)
+	constant.Name = prefix + "_" + strings.ToUpper(rosName)
 	constant.TypeName = rosType
 	constant.Value = value
 	return

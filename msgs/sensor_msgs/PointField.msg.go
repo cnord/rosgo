@@ -9,6 +9,17 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	PointField_INT8    uint8 = 1
+	PointField_UINT8   uint8 = 2
+	PointField_INT16   uint8 = 3
+	PointField_UINT16  uint8 = 4
+	PointField_INT32   uint8 = 5
+	PointField_UINT32  uint8 = 6
+	PointField_FLOAT32 uint8 = 7
+	PointField_FLOAT64 uint8 = 8
+)
+
 type _MsgPointField struct {
 	text   string
 	name   string

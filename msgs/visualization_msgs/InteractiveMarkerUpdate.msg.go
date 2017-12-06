@@ -11,6 +11,11 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	InteractiveMarkerUpdate_KEEP_ALIVE uint8 = 0
+	InteractiveMarkerUpdate_UPDATE     uint8 = 1
+)
+
 type _MsgInteractiveMarkerUpdate struct {
 	text   string
 	name   string

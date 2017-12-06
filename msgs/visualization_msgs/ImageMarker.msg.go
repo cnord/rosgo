@@ -13,6 +13,16 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	ImageMarker_CIRCLE     uint8 = 0
+	ImageMarker_LINE_STRIP uint8 = 1
+	ImageMarker_LINE_LIST  uint8 = 2
+	ImageMarker_POLYGON    uint8 = 3
+	ImageMarker_POINTS     uint8 = 4
+	ImageMarker_ADD        uint8 = 0
+	ImageMarker_REMOVE     uint8 = 1
+)
+
 type _MsgImageMarker struct {
 	text   string
 	name   string

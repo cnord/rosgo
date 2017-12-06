@@ -9,6 +9,39 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	CommandCode_CMD_DO_SET_MODE                    uint16 = 176
+	CommandCode_CMD_DO_JUMP                        uint16 = 177
+	CommandCode_CMD_DO_CHANGE_SPEED                uint16 = 178
+	CommandCode_CMD_DO_SET_HOME                    uint16 = 179
+	CommandCode_CMD_DO_SET_RELAY                   uint16 = 181
+	CommandCode_CMD_DO_REPEAT_RELAY                uint16 = 182
+	CommandCode_CMD_DO_SET_SERVO                   uint16 = 183
+	CommandCode_CMD_DO_REPEAT_SERVO                uint16 = 184
+	CommandCode_CMD_DO_CONTROL_VIDEO               uint16 = 200
+	CommandCode_CMD_DO_SET_ROI                     uint16 = 201
+	CommandCode_CMD_DO_MOUNT_CONTROL               uint16 = 205
+	CommandCode_CMD_DO_SET_CAM_TRIGG_DIST          uint16 = 206
+	CommandCode_CMD_DO_FENCE_ENABLE                uint16 = 207
+	CommandCode_CMD_DO_PARACHUTE                   uint16 = 208
+	CommandCode_CMD_DO_INVERTED_FLIGHT             uint16 = 210
+	CommandCode_CMD_DO_MOUNT_CONTROL_QUAT          uint16 = 220
+	CommandCode_CMD_PREFLIGHT_CALIBRATION          uint16 = 241
+	CommandCode_CMD_MISSION_START                  uint16 = 300
+	CommandCode_CMD_COMPONENT_ARM_DISARM           uint16 = 400
+	CommandCode_CMD_GET_HOME_POSITION              uint16 = 410
+	CommandCode_CMD_START_RX_PAIR                  uint16 = 500
+	CommandCode_CMD_REQUEST_AUTOPILOT_CAPABILITIES uint16 = 520
+	CommandCode_CMD_DO_TRIGGER_CONTROL             uint16 = 2003
+	CommandCode_NAV_WAYPOINT                       uint16 = 16
+	CommandCode_NAV_LOITER_UNLIM                   uint16 = 17
+	CommandCode_NAV_LOITER_TURNS                   uint16 = 18
+	CommandCode_NAV_LOITER_TIME                    uint16 = 19
+	CommandCode_NAV_RETURN_TO_LAUNCH               uint16 = 20
+	CommandCode_NAV_LAND                           uint16 = 21
+	CommandCode_NAV_TAKEOFF                        uint16 = 22
+)
+
 type _MsgCommandCode struct {
 	text   string
 	name   string

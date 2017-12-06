@@ -11,6 +11,25 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	PositionTarget_FRAME_LOCAL_NED        uint8  = 1
+	PositionTarget_FRAME_LOCAL_OFFSET_NED uint8  = 7
+	PositionTarget_FRAME_BODY_NED         uint8  = 8
+	PositionTarget_FRAME_BODY_OFFSET_NED  uint8  = 9
+	PositionTarget_IGNORE_PX              uint16 = 1
+	PositionTarget_IGNORE_PY              uint16 = 2
+	PositionTarget_IGNORE_PZ              uint16 = 4
+	PositionTarget_IGNORE_VX              uint16 = 8
+	PositionTarget_IGNORE_VY              uint16 = 16
+	PositionTarget_IGNORE_VZ              uint16 = 32
+	PositionTarget_IGNORE_AFX             uint16 = 64
+	PositionTarget_IGNORE_AFY             uint16 = 128
+	PositionTarget_IGNORE_AFZ             uint16 = 256
+	PositionTarget_FORCE                  uint16 = 512
+	PositionTarget_IGNORE_YAW             uint16 = 1024
+	PositionTarget_IGNORE_YAW_RATE        uint16 = 2048
+)
+
 type _MsgPositionTarget struct {
 	text   string
 	name   string

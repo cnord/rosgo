@@ -11,6 +11,11 @@ import (
 	"github.com/cnord/rosgo/ros"
 )
 
+const (
+	OverrideRCIn_CHAN_RELEASE  uint16 = 0
+	OverrideRCIn_CHAN_NOCHANGE uint16 = 65535
+)
+
 type _MsgOverrideRCIn struct {
 	text   string
 	name   string
