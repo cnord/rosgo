@@ -38,6 +38,10 @@ type defaultServiceServer struct {
 	sessionErrorChan chan error
 }
 
+var (
+	normalExitErr = fmt.Errorf("Normal exit")
+)
+
 func newDefaultServiceServer(node *defaultNode, service string, srvType ServiceType, handler interface{}) *defaultServiceServer {
 	logger := node.logger
 	server := new(defaultServiceServer)
@@ -109,8 +113,10 @@ func (s *defaultServiceServer) chanLoop() {
 	for {
 		select {
 		case err := <-s.sessionErrorChan:
-			logger.Errorf("session error: %v", err)
 			if sessionError, ok := err.(*remoteClientSessionError); ok {
+				if sessionError.err != normalExitErr {
+					logger.Errorf("session error: %v", err)
+				}
 				s.sessLock.Lock()
 				for e := s.sessions.Front(); e != nil; e = e.Next() {
 					if e.Value == sessionError.session {
@@ -119,6 +125,8 @@ func (s *defaultServiceServer) chanLoop() {
 					}
 				}
 				s.sessLock.Unlock()
+			} else {
+				logger.Errorf("session error: %v", err)
 			}
 		case <-s.shutdownChan:
 			logger.Debug("defaultServiceServer.start Receive shutdownChan")
@@ -181,12 +189,13 @@ func (s *remoteClientSession) start() {
 				s.server.sessionErrorChan <- &remoteClientSessionError{s, e}
 			}
 		} else {
-			e := fmt.Errorf("Normal exit")
+			e := normalExitErr
 			s.server.sessionErrorChan <- &remoteClientSessionError{s, e}
 		}
 	}()
 
 	// 1. Read request header
+	isProbeReq := false
 	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
 	if resHeaders, readErr := readConnectionHeader(conn); readErr != nil {
 		panic(readErr)
@@ -198,13 +207,15 @@ func (s *remoteClientSession) start() {
 			logger.Debugf("  `%s` = `%s`", h.key, h.value)
 		}
 		if probe, ok := resHeaderMap["probe"]; ok && probe == "1" {
-			logger.Debug("TCPROS header 'probe' detected. Session closed")
-			return
-		}
-		if resHeaderMap["service"] != service || resHeaderMap["md5sum"] != md5sum {
-			logger.Fatalf("Incompatible message type: %s(%s) != %s(%s)",
-				resHeaderMap["service"], resHeaderMap["md5sum"],
-				service, md5sum)
+			logger.Debug("TCPROS header 'probe' detected.")
+			isProbeReq = true
+		} else {
+			if resHeaderMap["service"] != service ||
+				resHeaderMap["md5sum"] != md5sum {
+				logger.Fatalf("Incompatible message type: %s(%s) != %s(%s)",
+					resHeaderMap["service"], resHeaderMap["md5sum"],
+					service, md5sum)
+			}
 		}
 	}
 
@@ -221,6 +232,9 @@ func (s *remoteClientSession) start() {
 	conn.SetDeadline(time.Now().Add(10 * time.Millisecond))
 	if err = writeConnectionHeader(headers, conn); err != nil {
 		panic(err)
+	}
+	if isProbeReq {
+		return
 	}
 
 	// 3. Read request
