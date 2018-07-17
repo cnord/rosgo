@@ -2,7 +2,6 @@ package ros
 
 import (
 	"fmt"
-	"math/rand"
 	"net"
 	"net/http"
 	"os"
@@ -41,22 +40,13 @@ type defaultNode struct {
 	waitGroup      sync.WaitGroup
 }
 
-func listenRandomPort(address string, trialLimit int) (net.Listener, error) {
-	var listener net.Listener
-	var err error
-	numTrial := 0
-	rand.Seed(time.Now().UnixNano())
-	for numTrial < trialLimit {
-		port := 1024 + rand.Intn(65535-1024)
-		addr := fmt.Sprintf("%s:%d", address, port)
-		listener, err = net.Listen("tcp", addr)
-		if err == nil {
-			return listener, nil
-		} else {
-			numTrial += 1
-		}
+func listenRandomPort(address string) (net.Listener, error) {
+	addr := fmt.Sprintf("%s:0", address)
+	if listener, err := net.Listen("tcp", addr); err == nil {
+		return listener, nil
+	} else {
+		return nil, fmt.Errorf("listenRandomPort exceeds trial limit.")
 	}
-	return nil, fmt.Errorf("listenRandomPort exceeds trial limit.")
 }
 
 func newDefaultNode(name string) *defaultNode {
@@ -86,7 +76,7 @@ func newDefaultNode(name string) *defaultNode {
 	node.masterUri = os.Getenv("ROS_MASTER_URI")
 	logger.Debugf("Master URI = %s", node.masterUri)
 
-	listener, err := listenRandomPort("127.0.0.1", 10)
+	listener, err := listenRandomPort("127.0.0.1")
 	if err != nil {
 		logger.Fatal(err)
 	}
