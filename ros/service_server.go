@@ -201,9 +201,10 @@ func (s *remoteClientSession) start() {
 			logger.Debug("TCPROS header 'probe' detected. Session closed")
 			return
 		}
-		if resHeaderMap["service"] != service ||
-			resHeaderMap["md5sum"] != md5sum {
-			logger.Fatalf("Incompatible message type!")
+		if resHeaderMap["service"] != service || resHeaderMap["md5sum"] != md5sum {
+			logger.Fatalf("Incompatible message type: %s(%s) != %s(%s)",
+				resHeaderMap["service"], resHeaderMap["md5sum"],
+				service, md5sum)
 		}
 	}
 
