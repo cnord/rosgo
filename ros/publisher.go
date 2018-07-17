@@ -57,7 +57,7 @@ func newDefaultPublisher(logger Logger, nodeId string, nodeApiUri string,
 	pub.sessions = list.New()
 	pub.connectCallback = connectCallback
 	pub.disconnectCallback = disconnectCallback
-	if listener, err := listenRandomPort("127.0.0.1", 10); err != nil {
+	if listener, err := listenRandomPort("127.0.0.1"); err != nil {
 		panic(err)
 	} else {
 		pub.listener = listener
