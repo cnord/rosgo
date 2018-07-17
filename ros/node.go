@@ -45,6 +45,7 @@ func listenRandomPort(address string, trialLimit int) (net.Listener, error) {
 	var listener net.Listener
 	var err error
 	numTrial := 0
+	rand.Seed(time.Now().UnixNano())
 	for numTrial < trialLimit {
 		port := 1024 + rand.Intn(65535-1024)
 		addr := fmt.Sprintf("%s:%d", address, port)
