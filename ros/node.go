@@ -45,7 +45,7 @@ func listenRandomPort(address string) (net.Listener, error) {
 	if listener, err := net.Listen("tcp", addr); err == nil {
 		return listener, nil
 	} else {
-		return nil, fmt.Errorf("listenRandomPort cannot found a free port.")
+		return nil, fmt.Errorf("listenRandomPort cannot found a free port: %s", err.Error())
 	}
 }
 
