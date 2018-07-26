@@ -41,11 +41,12 @@ type defaultNode struct {
 }
 
 func listenRandomPort(address string) (net.Listener, error) {
+	// Let OS give us one of ephemeral port
 	addr := fmt.Sprintf("%s:0", address)
 	if listener, err := net.Listen("tcp", addr); err == nil {
 		return listener, nil
 	} else {
-		return nil, fmt.Errorf("listenRandomPort cannot found a free port.")
+		return nil, fmt.Errorf("listenRandomPort cannot found a free port: %s", err.Error())
 	}
 }
 
