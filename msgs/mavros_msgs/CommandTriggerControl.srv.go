@@ -30,11 +30,12 @@ func (t *_SrvCommandTriggerControl) NewService() ros.Service {
 var (
 	SrvCommandTriggerControl = &_SrvCommandTriggerControl{
 		"mavros_msgs/CommandTriggerControl",
-		"7036c5f362c09a051915015871ce633d",
-		`# Type for controlling onboard camera trigerring system
+		"65be46a6918cb61b7dceb7c9ba9b1c97",
+		`# Type for controlling onboard camera triggering system
 
-bool    trigger_enable		# Trigger on/off control
-float32 cycle_time		# Camera trigger cycle time. Zero to use current onboard value.
+bool    trigger_enable		# Trigger enable/disable
+bool    sequence_reset		# Reset the trigger sequence
+bool    trigger_pause		# Pause triggering, but without switching the camera off or retracting it.
 ---
 bool success
 uint8 result
@@ -80,10 +81,11 @@ func (t *_MsgCommandTriggerControlRequest) NewMessage() ros.Message {
 
 var (
 	MsgCommandTriggerControlRequest = &_MsgCommandTriggerControlRequest{
-		`# Type for controlling onboard camera trigerring system
+		`# Type for controlling onboard camera triggering system
 
-bool    trigger_enable		# Trigger on/off control
-float32 cycle_time		# Camera trigger cycle time. Zero to use current onboard value.
+bool    trigger_enable		# Trigger enable/disable
+bool    sequence_reset		# Reset the trigger sequence
+bool    trigger_pause		# Pause triggering, but without switching the camera off or retracting it.
 `,
 		"mavros_msgs/CommandTriggerControlRequest",
 		"",
@@ -92,7 +94,8 @@ float32 cycle_time		# Camera trigger cycle time. Zero to use current onboard val
 
 type CommandTriggerControlRequest struct {
 	TriggerEnable bool
-	CycleTime     float32
+	SequenceReset bool
+	TriggerPause  bool
 }
 
 func (m *CommandTriggerControlRequest) Serialize(w io.Writer) (err error) {
@@ -100,7 +103,11 @@ func (m *CommandTriggerControlRequest) Serialize(w io.Writer) (err error) {
 		return err
 	}
 
-	if err = ros.SerializeMessageField(w, "float32", &m.CycleTime); err != nil {
+	if err = ros.SerializeMessageField(w, "bool", &m.SequenceReset); err != nil {
+		return err
+	}
+
+	if err = ros.SerializeMessageField(w, "bool", &m.TriggerPause); err != nil {
 		return err
 	}
 
@@ -113,8 +120,13 @@ func (m *CommandTriggerControlRequest) Deserialize(r io.Reader) (err error) {
 		return err
 	}
 
-	// CycleTime
-	if err = ros.DeserializeMessageField(r, "float32", &m.CycleTime); err != nil {
+	// SequenceReset
+	if err = ros.DeserializeMessageField(r, "bool", &m.SequenceReset); err != nil {
+		return err
+	}
+
+	// TriggerPause
+	if err = ros.DeserializeMessageField(r, "bool", &m.TriggerPause); err != nil {
 		return err
 	}
 

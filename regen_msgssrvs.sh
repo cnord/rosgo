@@ -2,6 +2,8 @@
 
 share_dir="$(dirname "${ROS_ROOT}")"
 base_dir="$(dirname "$BASH_SOURCE")"
+ROS_GEN_GO="$base_dir/ros-gen-go/ros-gen-go"
+
 # uuid_msgs is a dependecy for geographic_msgs
 msgs_dirs='
 	actionlib_msgs
@@ -45,6 +47,14 @@ if [[ "$@" != "" ]]; then
 	fi
 fi
 
+if ! test -x "$ROS_GEN_GO"; then
+	cd "$base_dir/ros-gen-go"
+	go get github.com/ogier/pflag
+	go build
+fi
+
+cd "$base_dir"
+
 for dir in $msgs_dirs; do
   dir="$(normalize_msgdir "$dir")"
   declare "$(echo "$dir"    | awk -F: '{printf "MSGDIR=%s",     $1}')"
@@ -55,6 +65,6 @@ for dir in $msgs_dirs; do
   [ -d $share_dir/${MSGDIR}/$MSGTYPE/ ] || continue
   for file in $(find $share_dir/${MSGDIR}/$MSGTYPE/ -mindepth 1 -maxdepth 1 -name "*.${MSGTYPE}"); do
     target=$base_dir/${MSGDIRBASE}/${MSGDIR}/${file##*/}
-    ros-gen-go $MSGTYPE --make-copy --package=${MSGDIR} --in=$file --out=$target.go
+    "${ROS_GEN_GO}" $MSGTYPE --make-copy --package=${MSGDIR} --in=$file --out=$target.go
   done
 done
