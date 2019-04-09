@@ -38,7 +38,7 @@ var (
 	MsgAltitude = &_MsgAltitude{
 		`# Altitude information
 #
-# https://pixhawk.ethz.ch/mavlink/#ALTITUDE
+# https://mavlink.io/en/messages/common.html#ALTITUDE
 
 std_msgs/Header header
 

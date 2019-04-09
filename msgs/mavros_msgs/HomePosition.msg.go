@@ -39,7 +39,7 @@ func (t *_MsgHomePosition) NewMessage() ros.Message {
 var (
 	MsgHomePosition = &_MsgHomePosition{
 		`# MAVLink message: HOME_POSITION
-# http://mavlink.org/messages/common#HOME_POSITION
+# https://mavlink.io/en/messages/common.html#HOME_POSITION
 
 std_msgs/Header header
 
